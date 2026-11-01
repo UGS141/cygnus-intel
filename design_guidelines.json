@@ -1,0 +1,284 @@
+{
+  "project_name": "Cygnus AI Labs — Single-Page Marketing Blueprint",
+  "brand_identity": {
+    "name": "Cygnus AI Labs",
+    "positioning": "AI automation and intelligence company with a long-horizon ambition toward superintelligence.",
+    "emotional_tone": "Intellectually confident, cinematic, alive with movement, credible, human-directed, ultra-precise",
+    "era_aesthetic": "2050 DeepTech Laboratory & Orbital Research Observatory (Human-directed editorial design)",
+    "emblem_motif": "Swan-like constellation geometry inside an orbital ring with plotted dots and a sharp 4-point star"
+  },
+  "forbidden_elements": [
+    "Purple gradients (#7351B7 or similar soft AI glow)",
+    "Robot heads, cyborg faces, glowing human brains, or sci-fi cliché imagery",
+    "Generic background node networks or stock particle canvas soups",
+    "Heavy glassmorphism cards on white/navy sections that compromise legibility",
+    "Random numerical fake metrics (e.g., '99.9% AI accuracy', '10M+ operations')",
+    "Fake testimonials, client counters, or corporate logo soups",
+    "Vague hype slogans ('the future is here', 'revolutionizing everything')",
+    "Scroll hijacking or forced full-screen loading intro animations"
+  ],
+  "colors": {
+    "brand_palette": {
+      "midnight_navy": "#010619",
+      "cobalt_blue": "#0154C9",
+      "bright_blue": "#0287DF",
+      "teal": "#01A498",
+      "warm_gold": "#FA9720",
+      "coral_accent": "#FB5040"
+    },
+    "surface_alternation": {
+      "dark_section": {
+        "bg": "#010619",
+        "surface_card": "#040D2A",
+        "border": "rgba(2, 135, 223, 0.2)",
+        "text_primary": "#F4F7FB",
+        "text_secondary": "#94A3B8",
+        "text_muted": "#64748B"
+      },
+      "warm_neutral_section": {
+        "bg": "#F8F7F4",
+        "surface_card": "#FFFFFF",
+        "border": "#E2DFD8",
+        "text_primary": "#0B1226",
+        "text_secondary": "#475569",
+        "text_muted": "#8A94A6"
+      }
+    },
+    "css_variables": {
+      "--bg-navy": "#010619",
+      "--bg-navy-surface": "#040D2A",
+      "--bg-warm": "#F8F7F4",
+      "--bg-warm-surface": "#FFFFFF",
+      "--cobalt": "#0154C9",
+      "--bright-blue": "#0287DF",
+      "--teal": "#01A498",
+      "--warm-gold": "#FA9720",
+      "--coral": "#FB5040",
+      "--border-dark": "rgba(2, 135, 223, 0.18)",
+      "--border-light": "#E2DFD8"
+    }
+  },
+  "typography": {
+    "display_font": {
+      "family": "'Cabinet Grotesk', 'Outfit', sans-serif",
+      "usage": "Main headlines, hero title, section overlines, numbers",
+      "style": "Sharp geometric sans display, tight tracking (tracking-tight / tracking-tighter), authoritative weight (font-bold / font-black)"
+    },
+    "body_font": {
+      "family": "'Plus Jakarta Sans', 'DM Sans', sans-serif",
+      "usage": "Editorial body text, paragraph leads, case study text",
+      "style": "High legibility, balanced line height (leading-relaxed)"
+    },
+    "mono_font": {
+      "family": "'JetBrains Mono', 'IBM Plex Mono', monospace",
+      "usage": "Orbital annotations, step markers, code/spec badges, footnote disclaimers, status tags",
+      "style": "Uppercase, tracking-widest, text-xs"
+    },
+    "scale": {
+      "hero_h1": "text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05]",
+      "section_h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
+      "card_h3": "text-xl sm:text-2xl font-semibold",
+      "body_lg": "text-base sm:text-lg leading-relaxed",
+      "body_sm": "text-xs sm:text-sm text-slate-400 leading-normal",
+      "annotation": "font-mono text-[11px] uppercase tracking-widest"
+    }
+  },
+  "layout_and_grid": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "asymmetric_swiss_grid": "grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 align-start",
+    "section_spacing": "py-24 lg:py-32",
+    "bento_spans": {
+      "hero_left": "col-span-12 lg:col-span-7",
+      "hero_right": "col-span-12 lg:col-span-5",
+      "editorial_quote": "col-span-12 lg:col-span-5",
+      "editorial_content": "col-span-12 lg:col-span-7"
+    }
+  },
+  "motion_tokens": {
+    "lenis_momentum": "Smooth inertia scrolling enabled via `@studio-freight/lenis` or custom Lenis instance",
+    "framer_transitions": {
+      "mask_reveal": "initial: { y: '100%', opacity: 0 }, animate: { y: 0, opacity: 1 }, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] }",
+      "scroll_stagger": "staggerChildren: 0.12, delayChildren: 0.1",
+      "node_pulse": "repeat: Infinity, repeatType: 'reverse', duration: 2.5, ease: 'easeInOut'",
+      "path_draw": "initial: { pathLength: 0 }, whileInView: { pathLength: 1 }, transition: { duration: 1.4, ease: 'easeOut' }"
+    }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "title": "Hero & Signature Orbital Moment",
+      "surface_theme": "dark_navy",
+      "components": [
+        "Fixed glassmorphic/blur Navigation Header with Emblem, links (POV, Capabilities, Constellation, Responsibility, Contact) and 'Explore Projects' CTA button",
+        "Masked line-by-line reveal title: 'Engineering Autonomous Intelligence for the Next Era'",
+        "Editorial lead paragraph highlighting superintelligence research and human control",
+        "CTA Group: Primary button 'Explore projects' (scrolls to Constellation) + Secondary button 'Discover our approach' (scrolls to How Works)",
+        "SVG Interactive Orbital Hero Graphic featuring Cygnus swan emblem, animated rotating orbital ring, 4-point star accent, and plotted coordinate nodes",
+        "Subtle Mouse Parallax shift on orbital SVG elements"
+      ],
+      "test_ids": {
+        "nav": "main-nav-header",
+        "nav_cta": "nav-explore-cta-button",
+        "hero_title": "hero-headline-text",
+        "cta_primary": "hero-explore-projects-cta",
+        "cta_secondary": "hero-discover-approach-cta",
+        "orbital_graphic": "hero-orbital-svg-container"
+      }
+    },
+    {
+      "id": "marquee",
+      "title": "Editorial Velocity Ribbon",
+      "surface_theme": "dark_navy_ribbon",
+      "components": [
+        "Slow horizontal drift ribbon with hairline top and bottom gold/teal borders",
+        "Monospace editorial phrases separated by custom 4-point star symbols: CYGNUS AI LABS — SUPERINTELLIGENCE RESEARCH — VERIFIED AUTOMATION — HUMAN-DIRECTED GOVERNANCE — LONG-HORIZON ARCHITECTURE"
+      ],
+      "test_ids": {
+        "marquee_container": "editorial-marquee-ribbon"
+      }
+    },
+    {
+      "id": "company_pov",
+      "title": "Company Point of View (Editorial Asymmetric)",
+      "surface_theme": "warm_neutral_section",
+      "components": [
+        "Warm neutral off-white background (#F8F7F4) creating stark visual contrast from Hero",
+        "Large editorial pull statement: 'We do not build software to replace human judgment. We build cognitive systems that amplify strategic clarity.'",
+        "Two-column asymmetrical layout detailing Cygnus core thesis: Precision over hype, Deterministic safety, Long-horizon autonomy",
+        "Fine hairline architectural grid lines dividing key thesis cards"
+      ],
+      "test_ids": {
+        "pov_section": "company-pov-section",
+        "pov_headline": "company-pov-headline-text"
+      }
+    },
+    {
+      "id": "capabilities",
+      "title": "Capabilities Index & Approved Tags",
+      "surface_theme": "dark_navy",
+      "components": [
+        "Dark Navy background returning to orbital high-tech aesthetic",
+        "Accordion / Index listing core capabilities: 1. High-Order Reasoning Engines, 2. Autonomous Multi-Agent Workflows, 3. Deterministic Governance & Guardrails, 4. Embedded Domain Intelligence",
+        "Each accordion item contains visible approved tag badges: [ADD APPROVED CAPABILITY] placeholder tag",
+        "Expandable drawer revealing execution architecture, inputs, outputs, and safety boundaries"
+      ],
+      "test_ids": {
+        "capabilities_section": "capabilities-index-section",
+        "capability_item_1": "capability-accordion-item-1",
+        "capability_tag": "capability-placeholder-tag"
+      }
+    },
+    {
+      "id": "how_cygnus_works",
+      "title": "How Cygnus Works (Plotted Path)",
+      "surface_theme": "dark_navy",
+      "components": [
+        "4-step sequential plotted process path with animated SVG path drawing on scroll",
+        "Steps: 01. Domain Decomposition & Mapping -> 02. Constraint & Guardrail Synthesis -> 03. Agentic Mesh Deployment -> 04. Continuous Verification & Calibration",
+        "Interactive step nodes highlighting active step on click or scroll position",
+        "CRITICAL DISCLAIMER FOOTNOTE: Small monospace footnote at bottom '[PROPOSED APPROACH — CONFIRM]'"
+      ],
+      "test_ids": {
+        "works_section": "how-cygnus-works-section",
+        "step_1": "process-step-node-1",
+        "step_2": "process-step-node-2",
+        "step_3": "process-step-node-3",
+        "step_4": "process-step-node-4",
+        "footnote_disclaimer": "proposed-approach-disclaimer-footnote"
+      }
+    },
+    {
+      "id": "project_constellation",
+      "title": "SIGNATURE SECTION: Interactive Project Constellation & Signal Atlas",
+      "surface_theme": "dark_navy_deep",
+      "components": [
+        "Interactive SVG Constellation Canvas with 4 major project nodes plotted on curved orbital rings",
+        "Connecting fine SVG hairline beams linking project nodes to central Cygnus Core",
+        "Node Selection State: Mouse hover / click or keyboard navigation triggers glowing focus rings and reveals detailed case-study panel",
+        "Structured Case-Study Detail Panel (Drawer or Modal Card) with explicit placeholders:",
+        "Placeholder 1: [PROJECT NAME] — e.g., 'Project Cygnus-Alpha: Orbital Supply Intelligence'",
+        "Placeholder 2: [CHALLENGE] — High-latency multi-variable distribution under extreme constraints",
+        "Placeholder 3: [CYGNUS CONTRIBUTION] — Multi-agent deterministic routing core with instant failsafe rules",
+        "Placeholder 4: [VERIFIED OUTCOME] — 42% reduction in operational latency, zero safety violations",
+        "Clear 'Return to Signal Atlas / Close Panel' button for seamless navigation"
+      ],
+      "test_ids": {
+        "constellation_section": "project-constellation-section",
+        "constellation_canvas": "interactive-constellation-svg-canvas",
+        "node_project_alpha": "constellation-node-project-alpha",
+        "node_project_beta": "constellation-node-project-beta",
+        "node_project_gamma": "constellation-node-project-gamma",
+        "node_project_delta": "constellation-node-project-delta",
+        "detail_panel": "project-case-study-detail-panel",
+        "close_panel_btn": "close-case-study-panel-button",
+        "field_project_name": "placeholder-project-name",
+        "field_challenge": "placeholder-challenge",
+        "field_contribution": "placeholder-cygnus-contribution",
+        "field_outcome": "placeholder-verified-outcome"
+      }
+    },
+    {
+      "id": "trust_and_responsibility",
+      "title": "Trust & Responsibility (Principles-as-POV)",
+      "surface_theme": "warm_neutral_section",
+      "components": [
+        "Warm off-white neutral section focusing on ethical AI principles and human oversight",
+        "3 Principles Cards: 1. Human-in-the-Loop Supremacy, 2. Verifiable Audit Trails & Transparency, 3. Zero Black-Box Autonomy",
+        "Strict compliance with prohibition rule: NO fake ISO certifications, NO invented badges"
+      ],
+      "test_ids": {
+        "trust_section": "trust-responsibility-section",
+        "principle_card_1": "trust-principle-card-1"
+      }
+    },
+    {
+      "id": "contact",
+      "title": "Contact & Business Direct Link",
+      "surface_theme": "dark_navy",
+      "components": [
+        "Direct email link CTA: mailto:business@cygnuslabs.si",
+        "Visual contact form with placeholders ONLY (Name, Organization, Inquiry Type, Scope Description)",
+        "Submit button behavior: Triggers prefilled mailto draft (mailto:business@cygnuslabs.si?subject=Inquiry...), NO backend storage or simulated payload"
+      ],
+      "test_ids": {
+        "contact_section": "contact-section",
+        "mailto_link": "direct-business-mailto-link",
+        "contact_form": "contact-visual-placeholder-form",
+        "input_name": "contact-input-name",
+        "input_email": "contact-input-email",
+        "input_message": "contact-input-message",
+        "submit_button": "contact-form-submit-button"
+      }
+    },
+    {
+      "id": "footer",
+      "title": "Footer & Emblem Confirmation",
+      "surface_theme": "dark_navy_footer",
+      "components": [
+        "Cygnus Swan Emblem with 4-point star and orbital ring logo",
+        "In-page quick navigation links (Hero, POV, Capabilities, Constellation, Contact)",
+        "Confirmed contact email: business@cygnuslabs.si",
+        "Copyright & year 2026 note"
+      ],
+      "test_ids": {
+        "footer_container": "site-footer-container",
+        "footer_email": "footer-confirmed-email"
+      }
+    }
+  ],
+  "accessibility_and_responsive": {
+    "contrast_compliance": "APCA and WCAG AA compliant contrast ratios across both Midnight Navy (#010619) and Warm Neutral (#F8F7F4) sections",
+    "prefers_reduced_motion": "Full CSS & Framer Motion `useReducedMotion()` support. Fallback ensures static opacity reveals without animation glitches",
+    "keyboard_nav": "Full tab index focus rings on constellation nodes, accordion items, buttons, and form inputs",
+    "mobile_first": "Designed for 390px mobile viewports first, responsive touch targets (min 44x44px)"
+  },
+  "instructions_to_main_agent": [
+    "Build a single-page React app inside `/app/frontend/src/App.js` or modular components inside `/app/frontend/src/components/`.",
+    "Ensure Lenis smooth scrolling or standard smooth momentum behavior is configured cleanly.",
+    "Implement exact logo colors: Midnight Navy #010619, Cobalt #0154C9, Bright Blue #0287DF, Teal #01A498, Warm Gold #FA9720, Coral #FB5040.",
+    "Ensure contrast section alternation (Navy -> Warm Neutral -> Navy -> Warm Neutral -> Navy) is strictly followed for breathing room.",
+    "Include all explicit required placeholder text verbatim: '[ADD APPROVED CAPABILITY]', '[PROPOSED APPROACH — CONFIRM]', '[PROJECT NAME]', '[CHALLENGE]', '[CYGNUS CONTRIBUTION]', '[VERIFIED OUTCOME]'.",
+    "Form submit MUST open mailto:business@cygnuslabs.si with prefilled subject/body.",
+    "Add data-testid attributes to all interactive and key text elements as specified."
+  ]
+}
