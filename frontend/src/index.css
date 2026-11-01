@@ -46,7 +46,9 @@ html {
 /* Underline Hover Effect */
 .u-line {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .u-line::after {
@@ -58,16 +60,21 @@ html {
   height: 1px;
   background-color: #FA9720;
   transition: width 0.25s ease-out;
+  pointer-events: none;
 }
 
 .u-line:hover::after,
-.u-line:focus-visible::after {
+.u-line:focus-visible::after,
+.group:hover .u-line::after,
+.group.open .u-line::after {
   width: 100%;
 }
 
 /* Navigation Dropdown Panel */
 .nav-drop {
   position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-drop-panel {
@@ -80,6 +87,11 @@ html {
   transform: translateY(6px);
   transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 60;
+}
+
+.nav-drop-panel-right {
+  left: auto;
+  right: 0;
 }
 
 .nav-drop:hover .nav-drop-panel,

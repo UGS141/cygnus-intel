@@ -20,11 +20,11 @@ const SERVICES_MENU = SERVICES.map((s) => ({
   n: s.n,
 }));
 
-const NavDrop = ({ id, label, header, items, open, setOpen }) => {
+const NavDrop = ({ id, label, header, items, open, setOpen, alignRight = false }) => {
   const isOpen = open === id;
   return (
     <div
-      className={`nav-drop group relative ${isOpen ? 'open' : ''}`}
+      className={`nav-drop group relative inline-flex items-center ${isOpen ? 'open' : ''}`}
       data-testid={`nav-${id}-group`}
       onKeyDown={(e) => {
         if (e.key === 'Escape') {
@@ -39,16 +39,16 @@ const NavDrop = ({ id, label, header, items, open, setOpen }) => {
         aria-expanded={isOpen}
         data-testid={`nav-link-${id}`}
         onClick={() => setOpen(isOpen ? null : id)}
-        className="u-line f-mono flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] text-cream/65 transition-colors duration-200 hover:text-gold"
+        className="u-line f-mono inline-flex items-center gap-1.5 whitespace-nowrap text-[11px] uppercase tracking-[0.16em] xl:tracking-[0.18em] text-cream/65 transition-colors duration-200 hover:text-gold cursor-pointer"
       >
-        {label}
+        <span>{label}</span>
         <ChevronDown
           size={12}
           aria-hidden="true"
-          className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : 'group-hover:rotate-180'}`}
+          className={`shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : 'group-hover:rotate-180'}`}
         />
       </button>
-      <div className="nav-drop-panel">
+      <div className={`nav-drop-panel ${alignRight ? 'nav-drop-panel-right' : ''}`}>
         <div className="w-80 border border-linedark bg-navy py-2 shadow-2xl">
           <p className="f-mono px-5 pb-1 pt-3 text-[9px] uppercase tracking-[0.22em] text-cream/40">
             {header}
@@ -109,13 +109,13 @@ export const Nav = () => {
     <>
       <header
         data-testid="main-nav-header"
-        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+        className={`fixed inset-x-0 top-0 z-50 w-full transition-colors duration-300 ${
           scrolled || open ? 'bg-navy/95 backdrop-blur-md border-b border-linedark' : 'border-b border-transparent'
         }`}
       >
-        <div className="mx-auto flex h-[72px] max-w-[1240px] items-center justify-between px-6 md:px-10">
-          <Link to="/" data-testid="nav-home-link" className="flex items-center gap-3" aria-label="Cygnus AI Labs — home">
-            <img src="/brand/cygnus-emblem-300.png" alt="" aria-hidden="true" className="h-10 w-10" />
+        <div className="mx-auto flex h-[72px] w-full max-w-[1240px] items-center justify-between px-4 sm:px-6 md:px-8 lg:px-10">
+          <Link to="/" data-testid="nav-home-link" className="flex shrink-0 items-center gap-3" aria-label="Cygnus AI Labs — home">
+            <img src="/brand/cygnus-emblem-300.png" alt="" aria-hidden="true" className="h-10 w-10 shrink-0" />
             <span className="leading-tight">
               <span className="f-display block text-[15px] font-bold tracking-tight text-cream">
                 Cygnus AI Labs
@@ -126,7 +126,7 @@ export const Nav = () => {
             </span>
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
+          <nav aria-label="Primary" className="hidden shrink-0 items-center gap-4 lg:flex xl:gap-6 2xl:gap-7">
             <NavDrop id="services" label="Services" header="Four disciplines" items={SERVICES_MENU} open={dropOpen} setOpen={setDropOpen} />
             <a
               href="/#point-of-view"
@@ -135,7 +135,7 @@ export const Nav = () => {
                 e.preventDefault();
                 goSection('#point-of-view');
               }}
-              className="u-line f-mono text-[11px] uppercase tracking-[0.18em] text-cream/65 transition-colors duration-200 hover:text-gold"
+              className="u-line f-mono inline-flex items-center whitespace-nowrap text-[11px] uppercase tracking-[0.16em] xl:tracking-[0.18em] text-cream/65 transition-colors duration-200 hover:text-gold"
             >
               Point of view
             </a>
@@ -146,11 +146,11 @@ export const Nav = () => {
                 e.preventDefault();
                 goSection('#work');
               }}
-              className="u-line f-mono text-[11px] uppercase tracking-[0.18em] text-cream/65 transition-colors duration-200 hover:text-gold"
+              className="u-line f-mono inline-flex items-center whitespace-nowrap text-[11px] uppercase tracking-[0.16em] xl:tracking-[0.18em] text-cream/65 transition-colors duration-200 hover:text-gold"
             >
               Work
             </a>
-            <NavDrop id="careers" label="Careers" header="Work at Cygnus" items={CAREERS_MENU} open={dropOpen} setOpen={setDropOpen} />
+            <NavDrop id="careers" label="Careers" header="Work at Cygnus" items={CAREERS_MENU} open={dropOpen} setOpen={setDropOpen} alignRight />
             <a
               href="/#contact"
               data-testid="nav-cta"
@@ -158,10 +158,10 @@ export const Nav = () => {
                 e.preventDefault();
                 goSection('#contact');
               }}
-              className="f-mono inline-flex items-center gap-2 rounded-[2px] border border-cream/25 px-4 py-2.5 text-[11px] uppercase tracking-[0.18em] text-cream transition-colors duration-200 hover:border-gold hover:text-gold"
+              className="f-mono inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-[2px] border border-cream/25 px-3.5 py-2 xl:px-4 xl:py-2.5 text-[11px] uppercase tracking-[0.16em] xl:tracking-[0.18em] text-cream transition-colors duration-200 hover:border-gold hover:text-gold"
             >
               Start a conversation
-              <ArrowUpRight size={13} aria-hidden="true" />
+              <ArrowUpRight size={13} aria-hidden="true" className="shrink-0" />
             </a>
           </nav>
 
@@ -171,7 +171,7 @@ export const Nav = () => {
             aria-expanded={open}
             aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((v) => !v)}
-            className="flex h-11 w-11 items-center justify-center text-cream lg:hidden"
+            className="flex h-11 w-11 shrink-0 items-center justify-center text-cream lg:hidden"
           >
             {open ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
           </button>
