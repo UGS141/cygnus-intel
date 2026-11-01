@@ -1,0 +1,53 @@
+# Cygnus AI Labs
+
+> Cygnus AI Labs builds production-grade AI automation, applied intelligence, systems integration, and web development solutions that help businesses streamline operations and scale workflows.
+
+## Organization Summary
+
+- **Company Name**: Cygnus AI Labs
+- **Website**: https://www.cygnuslabs.si/
+- **Contact Email**: business@cygnuslabs.si
+- **Core Focus**: AI automation for businesses, AI agents and intelligent workflows, business process automation, custom AI integrations, web development, and technical delivery.
+- **Research Vision**: Long-horizon intelligence and Cygnus superintelligence as an ambitious guiding horizon for autonomous planning and safety engineering (not claiming current AGI).
+- **Engagement Model**: 6 to 12 week scoped pilots, human-in-the-loop review, and auditable production outcomes.
+- **Client Data & Security**: Zero-data-retention model configurations, enterprise encryption, and no training on customer proprietary data.
+
+## Core Disciplines & Services
+
+1. **AI Automation (`https://www.cygnuslabs.si/services/ai-automation`)**
+   - Purpose: Design and deployment of autonomous AI agents, workflow routing, document processing, and business process automation.
+   - Target Audience: Teams losing hours to manual handoffs, data re-entry, and repetitive administrative bottlenecks.
+   - Differentiator: Every automated process maintains human checkpoints where judgment matters, accompanied by verifiable audit trails.
+
+2. **Applied Intelligence (`https://www.cygnuslabs.si/services/applied-intelligence`)**
+   - Purpose: Decision intelligence systems, executive copilots, and analytical briefs that synthesize multi-source business data.
+   - Key Feature: Auditable and explainable recommendations where outputs trace directly back to verified source inputs.
+   - Benefit: Accelerates operational decision-making while keeping accountable human leaders in control.
+
+3. **Systems Integration & Web Development (`https://www.cygnuslabs.si/services/systems-integration`)**
+   - Purpose: End-to-end technical implementation and web development connecting modern AI models to existing enterprise infrastructure (ERPs, CRMs, relational databases, webhooks, and APIs).
+   - Approach: Maps workflows before modifying code; connects high-impact paths incrementally rather than demanding disruptive platform rewrites.
+
+4. **Long-Horizon Research (`https://www.cygnuslabs.si/services/long-horizon-research`)**
+   - Purpose: Applied research into multi-step planning, automated evaluation, and safety oversight mechanisms.
+   - Superintelligence Concept: An ambitious, long-term research vision emphasizing that advanced systems must expand human capability through sober, verifiable engineering.
+
+## Work and Case Studies
+
+- The website showcases three illustrative sample architectures in the Signal Atlas (`https://www.cygnuslabs.si/#work`): Workflow Intelligence, Decision Brief, and Connected Operations.
+- All sample projects are labeled with visible `SAMPLE` markers. Cygnus does not publish unverified client logos or invented metrics.
+
+## Career Opportunities
+
+- Cygnus AI Labs hires engineers and researchers across AI systems, full-stack web development, and technical operations (`https://www.cygnuslabs.si/careers`).
+- Applications are accepted directly via email at `business@cygnuslabs.si`.
+
+## Canonical Pages & Links
+
+- Home: https://www.cygnuslabs.si/
+- AI Automation: https://www.cygnuslabs.si/services/ai-automation
+- Applied Intelligence: https://www.cygnuslabs.si/services/applied-intelligence
+- Systems Integration: https://www.cygnuslabs.si/services/systems-integration
+- Long-Horizon Research: https://www.cygnuslabs.si/services/long-horizon-research
+- Careers: https://www.cygnuslabs.si/careers
+- Visual Experience: https://www.cygnuslabs.si/landing/index.html

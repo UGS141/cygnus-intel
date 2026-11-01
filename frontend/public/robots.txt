@@ -1,0 +1,8 @@
+# robots.txt for Cygnus AI Labs
+# Canonical Domain: https://www.cygnuslabs.si/
+
+User-agent: *
+Allow: /
+
+# Canonical XML Sitemap
+Sitemap: https://www.cygnuslabs.si/sitemap.xml
