@@ -1,8 +1,6 @@
 // ─────────────────────────────────────────────────────────────────
 // SERVICES — single source of truth for the four service pages.
 // Each service has its own page at /services/<slug>.
-// `detail` currently holds SAMPLE engagement copy — replace with
-// approved offerings before publishing.
 // accent: one brand color per page (gold, bright blue, teal, coral).
 // visual: which animated SVG scene the hero shows.
 // layout: which side the hero visual sits on at desktop.
@@ -24,7 +22,7 @@ export const SERVICES = [
     problem: 'Growing businesses lose valuable hours to manual workflows that repeat constantly but still require vigilance. As operations expand, these repetitive bottlenecks cause delays, inconsistent handoffs, and operational friction that scale poorly.',
     approach: 'We study your actual business processes before writing code, pinpointing the highest-friction manual handoffs. We build targeted AI agents with human-in-the-loop checkpoints where judgment is vital, ensuring exception handling is auditable and transparent.',
     connection: 'Workflow automation is where artificial intelligence earns operational trust. Delivering measurable efficiency in day-to-day business processes forms the bedrock for advanced multi-step autonomous planning.',
-    detail: 'Sample: typical pilot engagement is a 6–12 week deployment — focused scope, human-in-the-loop oversight throughout, measured against baseline operational hours.',
+    detail: 'Typical pilot engagements begin with a focused 6–12 week deployment — defined scope, human-in-the-loop oversight throughout, measured against operational baselines.',
   },
   {
     slug: 'applied-intelligence',
@@ -41,7 +39,7 @@ export const SERVICES = [
     problem: 'Critical business intelligence is frequently scattered across disparate tools, spreadsheets, customer channels, and internal databases. The bottleneck in decision-making is rarely judgment — it is the hours required to assemble and synthesize the picture.',
     approach: 'We engineer decision systems for strict legibility: every recommendation cites its underlying source data, confidence parameters are explicit, and human decision-makers retain ultimate verification authority.',
     connection: 'Transparent reasoning bridges everyday decision support with dependable advanced intelligence, establishing safety and governance habits necessary for long-term scalability.',
-    detail: 'Sample: typical engagement introduces a decision-support copilot piloted with a single operational team, expanding after accuracy and utility are verified.',
+    detail: 'Engagements introduce decision-support copilots tailored to specific operational teams, expanding as accuracy and utility are established.',
   },
   {
     slug: 'systems-integration',
@@ -58,7 +56,7 @@ export const SERVICES = [
     problem: 'The primary challenge of enterprise AI adoption is rarely model capability; it is the production engineering: data privacy, security permissions, edge-case routing, and connecting siloed software without causing workflow disruptions.',
     approach: 'We architect for production reality: mapping data flows across your web infrastructure, integrating the highest-priority automation pathways incrementally, and ensuring full compliance with your team’s security and access rules.',
     connection: 'Robust technical implementation transforms experimental AI into dependable business infrastructure — turning standalone prototypes into resilient systems organizations rely on daily.',
-    detail: 'Sample: typical integration wires a targeted operational pipeline in weeks — avoiding disruptive platform overhauls or vendor lock-in.',
+    detail: 'Technical delivery connects targeted operational pipelines directly into production systems, avoiding disruptive platform overhauls or vendor lock-in.',
   },
   {
     slug: 'long-horizon-research',
@@ -75,6 +73,6 @@ export const SERVICES = [
     problem: 'AI capabilities are advancing rapidly, yet reliable methods for steering, validating, and ensuring the reversibility of autonomous agents across extended time horizons require deeper, more rigorous engineering.',
     approach: 'We approach safety, oversight, and interpretability as essential technical specifications rather than afterthoughts. If an autonomous system’s reasoning and decision boundaries cannot be inspected and understood, it is not deployed.',
     connection: 'Cygnus superintelligence represents our guiding horizon: an ambitious commitment that advanced machine intelligence must be human-directed, expanding human capability rather than operating as an unconstrained black box.',
-    detail: 'Sample: current research explores planning verifiers, safety guardrails, and benchmark evaluations; technical insights inform our production automation systems.',
+    detail: 'Research focuses on planning verifiers, safety guardrails, and benchmark evaluations; technical insights inform our production automation systems.',
   },
 ];

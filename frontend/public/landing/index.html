@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Intelligence Designed To Evolve</title>
+<title>Intelligence Designed To Evolve — Cygnus AI Labs</title>
 <link rel="icon" type="image/png" href="../favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +50,7 @@
         <span class="avatar a1"><span class="inner"><i class="fa-solid fa-microchip" aria-hidden="true"></i></span></span>
         <span class="avatar a2"><span class="inner"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></span></span>
         <span class="avatar a3"><span class="inner"><i class="fa-solid fa-cubes" aria-hidden="true"></i></span></span>
-        <span class="trust-pill">Architecture Pilots <em style="font-size:0.85em; opacity:0.85;">(Sample)</em></span>
+        <span class="trust-pill">Architecture Pilots</span>
       </div>
 
       <h1 class="headline" aria-label="Intelligence Designed To Evolve">
@@ -70,7 +70,7 @@
       <div class="stat anim" style="--d:0.5s">
         <span class="stat-icon" aria-hidden="true">&lt;</span>
         <span class="stat-value" data-target="120" data-decimals="0" data-suffix="ms">0ms</span>
-        <span class="stat-label">Inference Target (Sample)</span>
+        <span class="stat-label">Inference Target</span>
       </div>
       <div class="stat anim" style="--d:0.58s">
         <span class="stat-icon" aria-hidden="true">%</span>
@@ -80,12 +80,12 @@
       <div class="stat anim" style="--d:0.66s">
         <span class="stat-icon" aria-hidden="true">*</span>
         <span class="stat-value" data-target="24" data-decimals="0" data-suffix="/7">0/7</span>
-        <span class="stat-label">Autonomous Runtime (Sample)</span>
+        <span class="stat-label">Autonomous Runtime</span>
       </div>
       <div class="stat anim" style="--d:0.74s">
         <span class="stat-icon" aria-hidden="true">#</span>
         <span class="stat-value" data-target="2.4" data-decimals="1" data-suffix="M">0M</span>
-        <span class="stat-label">Context Windows (Sample)</span>
+        <span class="stat-label">Context Windows</span>
       </div>
     </footer>
   </div>
@@ -100,128 +100,142 @@
   </nav>
 </section>
 
-<!-- ═══════════ 2 · AI ASSISTANT — Glass Iris dashboard ═══════════ -->
-<section class="dash" id="assistant" data-mode="chat">
-  <aside class="dash-rail" aria-label="App rail">
-    <span class="tile logo-tile"><img src="assets/logo.webp" alt="" width="24" height="24" /></span>
-    <button class="tile" type="button" aria-label="Home"><i class="fa-solid fa-house" aria-hidden="true"></i></button>
-    <button class="tile" type="button" aria-label="Analytics"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i></button>
-    <button class="tile on" type="button" aria-label="Chats"><i class="fa-solid fa-comments" aria-hidden="true"></i></button>
-    <button class="tile" type="button" aria-label="Automations"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></button>
-    <span class="rail-bottom">
-      <button class="tile" type="button" aria-label="Account"><i class="fa-solid fa-user" aria-hidden="true"></i></button>
-      <button class="tile" type="button" aria-label="Settings"><i class="fa-solid fa-gear" aria-hidden="true"></i></button>
-    </span>
-  </aside>
+<!-- ═══════════ 2 · PRODUCT ASSISTANT DEMO ═══════════ -->
+<section class="assistant" id="assistant">
+  <div class="dash-glow" aria-hidden="true"></div>
+  <div class="dash-grid" aria-hidden="true"></div>
 
-  <div class="dash-main">
-    <div class="dash-topbar">
-      <button class="tile back-tile" type="button" aria-label="Back" data-testid="dash-back"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
-      <button class="fwd" type="button" aria-label="Forward"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
-      <p class="crumbs"><a href="/">Home</a> <span>›</span> <strong>AI Assistant</strong></p>
-      <div class="top-right">
-        <label class="search">
-          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-          <input type="search" placeholder="Search Anything..." aria-label="Search conversations" data-testid="dash-search" />
-        </label>
-        <button class="tile bell" type="button" aria-label="Notifications" aria-expanded="false" data-testid="dash-bell">
-          <i class="fa-regular fa-bell" aria-hidden="true"></i><span class="bell-dot" aria-hidden="true"></span>
-        </button>
-        <button class="avatar" type="button" aria-label="Account menu" aria-expanded="false"><img src="assets/logo.webp" alt="" width="24" height="24" /></button>
+  <div class="dash-wrap">
+    <div class="dash-header rv" style="--rd:0s">
+      <div class="dash-tag">
+        <span class="dash-tag-dot"></span>
+        Interactive System
       </div>
-    </div>
-    <div class="bell-menu" hidden>No new notifications — you're all caught up.</div>
-    <div class="avatar-menu" hidden><a href="/">Back to site</a></div>
-
-    <div class="dash-subbar">
-      <div class="seg" role="group" aria-label="Mode">
-        <button type="button" class="on" data-mode="chat" aria-pressed="true">Chat Mode</button>
-        <button type="button" data-mode="overview" aria-pressed="false">Overview</button>
-      </div>
-      <span class="status"><span class="dot" aria-hidden="true"></span>AI Agents Running <span class="badge">17</span></span>
-    </div>
-
-    <div class="dash-glow" aria-hidden="true"></div>
-
-    <div class="dash-hero">
-      <div class="orb-wrap" aria-hidden="true">
-        <div class="orb-plate">
-          <div class="orb-core"></div>
-          <div class="orb-glass"></div>
-        </div>
-        <!-- Optional motion layer: drop a muted looping orb video here with class="orb-video";
-             it fades in on loadeddata via main.js. Reduced-motion users keep the still plate. -->
-      </div>
-
-      <p class="dash-greeting">Good Morning, Jason</p>
-      <h2 class="dash-headline" aria-label="What's on your mind?">
-        <span class="wm"><span>WHAT'S</span></span>
-        <span class="wm"><span>ON</span></span>
-        <span class="wm"><span>YOUR</span></span>
-        <span class="wm"><span>MIND?</span></span>
+      <h2 class="dash-title">
+        The Autonomous Agent System
       </h2>
-      <p class="dash-subline">Get personalized financial insights, smarter recommendations.</p>
+      <p class="dash-sub">
+        Explore a simulated view of multi-agent operations — planning, tool routing, memory, and runtime diagnostics.
+      </p>
+    </div>
 
-      <form class="composer" data-testid="dash-composer">
-        <div class="composer-inner">
-          <input type="text" placeholder="Ask Anything..." aria-label="Ask Anything" data-testid="dash-input" />
-          <div class="composer-row">
-            <button class="chip" type="button" aria-label="Add context"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
-            <span class="chip-wrap">
-              <button class="chip" type="button" aria-expanded="false" data-chip="mode">Normal <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
-              <span class="chip-menu" hidden>
-                <button type="button" data-value="Normal">Normal</button>
-                <button type="button" data-value="Fast">Fast</button>
-              </span>
-            </span>
-            <span class="chip-wrap">
-              <button class="chip" type="button" aria-expanded="false" data-chip="think">Deep Think <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
-              <span class="chip-menu" hidden>
-                <button type="button" data-value="Deep Think">Deep Think</button>
-                <button type="button" data-value="Quick">Quick</button>
-              </span>
-            </span>
-            <button class="chip voice" type="button" aria-label="Voice input" data-testid="dash-voice"><i class="fa-solid fa-microphone" aria-hidden="true"></i> Voice</button>
-            <button class="send" type="submit" aria-label="Send" data-testid="dash-send"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    <div class="dash-app rv" style="--rd:0.12s">
+      <!-- Top app bar -->
+      <header class="dash-app-bar">
+        <div class="dash-window-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="dash-system-status">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span class="status-text">CYGNUS CORE &middot; ONLINE</span>
+          <span class="status-sep">&middot;</span>
+          <span class="status-meta">LATENCY 42ms</span>
+        </div>
+        <div class="dash-app-controls">
+          <button class="dash-ctrl-btn" type="button" aria-label="Minimize"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
+          <button class="dash-ctrl-btn" type="button" aria-label="Reset telemetry" data-testid="dash-reset"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></button>
+        </div>
+      </header>
+
+      <!-- App body: sidebar + main -->
+      <div class="dash-body">
+        <aside class="dash-side">
+          <div class="side-sec">
+            <span class="side-kicker">Agents Active</span>
+            <div class="side-item is-active" data-agent="sentinel">
+              <span class="item-dot" style="background:#2A6DFC;"></span>
+              <span class="item-name">Sentinel-4</span>
+              <span class="item-pill">Planner</span>
+            </div>
+            <div class="side-item" data-agent="vector">
+              <span class="item-dot" style="background:#3FD0FF;"></span>
+              <span class="item-name">Vector-9</span>
+              <span class="item-pill">Router</span>
+            </div>
+            <div class="side-item" data-agent="cortex">
+              <span class="item-dot" style="background:#FDB813;"></span>
+              <span class="item-name">Cortex-1</span>
+              <span class="item-pill">Memory</span>
+            </div>
+          </div>
+
+          <div class="side-sec">
+            <span class="side-kicker">System Metrics</span>
+            <div class="metric-row">
+              <span class="m-label">Tokens / sec</span>
+              <span class="m-val" id="metricTokens">842</span>
+            </div>
+            <div class="metric-row">
+              <span class="m-label">Memory index</span>
+              <span class="m-val" id="metricMemory">99.2%</span>
+            </div>
+            <div class="metric-row">
+              <span class="m-label">Error rate</span>
+              <span class="m-val" id="metricErrors">0.00%</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="dash-main">
+          <!-- Feed of messages / trace steps -->
+          <div class="feed" id="agentFeed" role="log" aria-live="polite" aria-label="Agent trace output">
+            <div class="feed-step">
+              <span class="step-badge sys">SYSTEM</span>
+              <div class="step-body">
+                <p class="step-text">Cluster initialized with 3 agents. Ready for instructions.</p>
+                <span class="step-time">00:00:01</span>
+              </div>
+            </div>
+            <div class="feed-step">
+              <span class="step-badge ag">SENTINEL-4</span>
+              <div class="step-body">
+                <p class="step-text">Observing target environment &middot; Context windows stable at 2.4M tokens.</p>
+                <span class="step-time">00:00:03</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom command input bar -->
+          <div class="dash-input-bar">
+            <div class="chips">
+              <button class="chip is-active" type="button" data-scenario="analyze" data-testid="dash-chip-analyze">Analyze repo</button>
+              <button class="chip" type="button" data-scenario="deploy" data-testid="dash-chip-deploy">Deploy agent</button>
+              <button class="chip" type="button" data-scenario="audit" data-testid="dash-chip-audit">Audit safety</button>
+              <button class="chip voice" type="button" aria-label="Voice input" data-testid="dash-voice"><i class="fa-solid fa-microphone" aria-hidden="true"></i> Voice</button>
+            </div>
+            <form class="cmd-form" id="cmdForm">
+              <span class="cmd-prompt">&gt;</span>
+              <input class="cmd-input" type="text" id="cmdInput" placeholder="Dispatch a directive to the agent cluster..." autocomplete="off" aria-label="Agent directive input" />
+              <button class="cmd-send" type="submit" aria-label="Send directive" data-testid="dash-send">
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </form>
           </div>
         </div>
-      </form>
-
-      <div class="dash-cards">
-        <button class="card" type="button" data-prompt="Create a smart budget plan for this month">
-          <span class="card-icon ci-blue"><i class="fa-solid fa-wallet" aria-hidden="true"></i></span>
-          <h4>Smart Budget Plan</h4><p>Create My Budget</p>
-        </button>
-        <button class="card" type="button" data-prompt="Help me set a realistic saving goal">
-          <span class="card-icon ci-violet"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></span>
-          <h4>Set a Saving Goal</h4><p>Set a Goal</p>
-        </button>
-        <button class="card" type="button" data-prompt="Track and categorize my recent expenses">
-          <span class="card-icon ci-indigo"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
-          <h4>Track My Expenses</h4><p>Monitor Spending</p>
-        </button>
-      </div>
-
-      <div class="dash-history" data-testid="dash-history">
-        <h5>Recent Conversations</h5>
-        <div class="hist-list">
-          <div class="hist-item"><span>How much did I spend on dining last month?</span><span class="hist-time">2m ago</span></div>
-          <div class="hist-item"><span>Can I afford a €400 purchase this week?</span><span class="hist-time">18m ago</span></div>
-          <div class="hist-item"><span>Summarize my subscriptions.</span><span class="hist-time">1h ago</span></div>
-          <div class="hist-item"><span>What's my safest saving rate?</span><span class="hist-time">Yesterday</span></div>
-          <div class="hist-item extra" hidden><span>Project my balance in 6 months.</span><span class="hist-time">Monday</span></div>
-          <div class="hist-item extra" hidden><span>Find unused recurring charges.</span><span class="hist-time">Monday</span></div>
-        </div>
-        <button class="see-more" type="button" data-testid="dash-seemore">See More →</button>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="dash-overview" aria-label="Platform overview">
-      <div class="ov-tile"><strong>120ms</strong><span>Inference Time</span></div>
-      <div class="ov-tile"><strong>99.99%</strong><span>Platform Uptime</span></div>
-      <div class="ov-tile"><strong>24/7</strong><span>Autonomous Runtime</span></div>
-      <div class="ov-tile"><strong>2.4M</strong><span>Context Windows</span></div>
-    </div>
+<!-- ═══════════ 2.5 · NARRATIVE INTRO ═══════════ -->
+<section class="cx" id="narrative">
+  <p class="cx-kicker rv" style="--rd:0s">Point of view</p>
+  <h2 class="cx-title rv" style="--rd:0.08s">Most automation saves labour.<br />The interesting kind changes what a team can attempt.</h2>
+  <div class="narrative-grid rv" style="--rd:0.16s">
+    <p>
+      We treat artificial intelligence not as an ornament on an existing process, but as a
+      rethinking of the work itself. When routine cognition becomes abundant, the role of human
+      judgment does not diminish &mdash; it becomes the limiting factor.
+    </p>
+    <p>
+      We design systems that work beside people rather than in front of them: legible, steerable,
+      and honest about what they can and cannot do.
+    </p>
+    <p>
+      Automation compounds. Every system we ship is a step toward intelligence that can plan,
+      reason and act over long horizons &mdash; what many now call superintelligence. We think
+      that destination deserves sober engineering, not slogans.
+    </p>
   </div>
 </section>
 
@@ -229,32 +243,32 @@
 <section class="cx" id="capabilities">
   <p class="cx-kicker rv" style="--rd:0s">Capabilities</p>
   <h2 class="cx-title rv" style="--rd:0.08s">Automation that does the work.<br />Intelligence that decides how.</h2>
-  <p class="cx-sub rv" style="--rd:0.16s">Four focus areas, one practice. Service lines shown are samples — replace with approved offerings.</p>
+  <p class="cx-sub rv" style="--rd:0.16s">Four focus areas, one practice: workflow automation, decision intelligence, systems integration, and long-horizon research.</p>
 
   <div class="cap-list rv" style="--rd:0.24s">
     <button class="cap-row" type="button" aria-expanded="false">
       <span class="cap-num">01</span>
       <span class="cap-name">AI Automation</span>
       <span class="cap-tag">Repetitive work, handled reliably</span>
-      <span class="cap-detail">Sample service lines: workflow automation, document processing, monitoring &amp; alerting.</span>
+      <span class="cap-detail">Core capabilities: workflow automation, document processing, monitoring &amp; alerting.</span>
     </button>
     <button class="cap-row" type="button" aria-expanded="false">
       <span class="cap-num">02</span>
       <span class="cap-name">Applied Intelligence</span>
       <span class="cap-tag">Decisions with their reasoning attached</span>
-      <span class="cap-detail">Sample service lines: decision briefs, analyst copilots, auditable recommendations.</span>
+      <span class="cap-detail">Core capabilities: decision briefs, analyst copilots, auditable recommendations.</span>
     </button>
     <button class="cap-row" type="button" aria-expanded="false">
       <span class="cap-num">03</span>
       <span class="cap-name">Systems Integration</span>
       <span class="cap-tag">AI wired into the stack you already run</span>
-      <span class="cap-detail">Sample service lines: tool &amp; data connection, workflow wiring, production hardening.</span>
+      <span class="cap-detail">Core capabilities: tool &amp; data connection, workflow wiring, production hardening.</span>
     </button>
     <button class="cap-row" type="button" aria-expanded="false">
       <span class="cap-num">04</span>
       <span class="cap-name">Long-Horizon Research</span>
       <span class="cap-tag">Careful steps toward further-planning intelligence</span>
-      <span class="cap-detail">Sample focus areas: long-horizon planning, evaluations, oversight mechanisms.</span>
+      <span class="cap-detail">Research areas: long-horizon planning, evaluations, oversight mechanisms.</span>
     </button>
   </div>
 </section>
@@ -289,61 +303,66 @@
   </div>
 </section>
 
-<!-- ═══════════ 5 · PROJECTS (sample index) ═══════════ -->
+<!-- ═══════════ 5 · PROJECTS (selected digital work) ═══════════ -->
 <section class="cx" id="projects">
   <p class="cx-kicker rv" style="--rd:0s">Selected work</p>
   <h2 class="cx-title rv" style="--rd:0.08s">The project index.</h2>
-  <p class="cx-sub rv" style="--rd:0.16s">Sample entries — clearly marked, awaiting verified details.</p>
+  <p class="cx-sub rv" style="--rd:0.16s">Selected digital work across specialized industries.</p>
 
   <div class="proj-list rv" style="--rd:0.24s">
     <div class="proj">
       <button class="proj-row" type="button" aria-expanded="false">
         <span class="cap-num">P.01</span>
-        <span class="cap-name">Workflow Intelligence</span>
-        <span class="chip-sample">Sample</span>
+        <span class="cap-name">Adore Milling Solutions</span>
+        <span class="cap-tag">Dental technology</span>
       </button>
       <div class="proj-detail" hidden>
         <dl class="proj-dl">
-          <dt>Category</dt><dd>AI automation</dd>
-          <dt>Client</dt><dd>Internal pilot program (sample)</dd>
-          <dt>Challenge</dt><dd>Repeated manual handoffs can make everyday workflows harder to manage.</dd>
-          <dt>Contribution</dt><dd>Map a workflow, identify useful automation opportunities, and design AI-assisted routing with human review for exceptions.</dd>
-          <dt>Outcome</dt><dd>Sample: weekly reporting handoffs dropped from ~6 hours to ~40 minutes in the pilot workflow.</dd>
-          <dt>Tools</dt><dd>Python, LangGraph, Postgres, internal APIs (sample stack)</dd>
+          <dt>Industry</dt><dd>Dental technology</dd>
+          <dt>Description</dt><dd>Digital dental milling solutions, precision, quality, consistency, and open-system CAD/CAM integrations.</dd>
+          <dt>Website</dt><dd><a href="https://adore-smile.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--gold); text-decoration:underline;">adore-smile.vercel.app &nearr;</a></dd>
         </dl>
       </div>
     </div>
     <div class="proj">
       <button class="proj-row" type="button" aria-expanded="false">
         <span class="cap-num">P.02</span>
-        <span class="cap-name">Decision Brief</span>
-        <span class="chip-sample">Sample</span>
+        <span class="cap-name">Integris Life Sciences</span>
+        <span class="cap-tag">Life sciences</span>
       </button>
       <div class="proj-detail" hidden>
         <dl class="proj-dl">
-          <dt>Category</dt><dd>Decision intelligence</dd>
-          <dt>Client</dt><dd>Internal pilot program (sample)</dd>
-          <dt>Challenge</dt><dd>Relevant information may be spread across multiple sources, making it difficult to form a clear view.</dd>
-          <dt>Contribution</dt><dd>Design a human-reviewed intelligence interface that brings relevant information together to support decisions.</dd>
-          <dt>Outcome</dt><dd>Sample: analysts assembled a complete decision brief in about an hour instead of a full day.</dd>
-          <dt>Tools</dt><dd>React, FastAPI, pgvector, Claude API (sample stack)</dd>
+          <dt>Industry</dt><dd>Life sciences</dd>
+          <dt>Description</dt><dd>Pharmaceutical formulations and healthcare products.</dd>
+          <dt>Website</dt><dd><a href="https://integris-ls-ugs-2026.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--gold); text-decoration:underline;">integris-ls-ugs-2026.vercel.app &nearr;</a></dd>
         </dl>
       </div>
     </div>
     <div class="proj">
       <button class="proj-row" type="button" aria-expanded="false">
         <span class="cap-num">P.03</span>
-        <span class="cap-name">Connected Operations</span>
-        <span class="chip-sample">Sample</span>
+        <span class="cap-name">BES Info Tech Pvt Limited</span>
+        <span class="cap-tag">IT and workforce solutions</span>
       </button>
       <div class="proj-detail" hidden>
         <dl class="proj-dl">
-          <dt>Category</dt><dd>Integration</dd>
-          <dt>Client</dt><dd>Internal pilot program (sample)</dd>
-          <dt>Challenge</dt><dd>Separate tools can make it difficult to move information through a process consistently.</dd>
-          <dt>Contribution</dt><dd>Explore an integration approach that connects existing tools and adds automation where appropriate.</dd>
-          <dt>Outcome</dt><dd>Sample: order data moved between three systems with zero manual re-entry during the pilot.</dd>
-          <dt>Tools</dt><dd>Node.js, webhooks, message queues, ERP APIs (sample stack)</dd>
+          <dt>Industry</dt><dd>IT and workforce solutions</dd>
+          <dt>Description</dt><dd>IT recruitment, manpower solutions, and campus placements.</dd>
+          <dt>Website</dt><dd><a href="https://besinfotech.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--gold); text-decoration:underline;">besinfotech.vercel.app &nearr;</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div class="proj">
+      <button class="proj-row" type="button" aria-expanded="false">
+        <span class="cap-num">P.04</span>
+        <span class="cap-name">True Car Bazaar</span>
+        <span class="cap-tag">Automotive commerce</span>
+      </button>
+      <div class="proj-detail" hidden>
+        <dl class="proj-dl">
+          <dt>Industry</dt><dd>Automotive commerce</dd>
+          <dt>Description</dt><dd>A pre-owned car marketplace for buying, selling, or exchanging used cars.</dd>
+          <dt>Website</dt><dd><a href="https://true-car-bazaar2026.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--gold); text-decoration:underline;">true-car-bazaar2026.vercel.app &nearr;</a></dd>
         </dl>
       </div>
     </div>
@@ -411,16 +430,15 @@
     <div class="rt-option rt-social" id="rtSocial" style="transition-delay: 0.12s">
       <span class="rt-label">Social</span>
       <span class="rt-social-links">
-        <!-- PLACEHOLDER URLS — replace each href with the real Cygnus profile when available -->
-        <a class="rt-soc is-ph" href="#" data-profile="linkedin" aria-label="LinkedIn — placeholder, add profile URL" title="LinkedIn — add profile URL"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-        <a class="rt-soc is-ph" href="#" data-profile="instagram" aria-label="Instagram — placeholder, add profile URL" title="Instagram — add profile URL"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-        <a class="rt-soc is-ph" href="#" data-profile="x" aria-label="X / Twitter — placeholder, add profile URL" title="X / Twitter — add profile URL"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+        <a class="rt-soc is-ph" href="#" data-profile="linkedin" aria-label="LinkedIn profile" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a class="rt-soc is-ph" href="#" data-profile="instagram" aria-label="Instagram profile" title="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a class="rt-soc is-ph" href="#" data-profile="x" aria-label="X / Twitter profile" title="X / Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
       </span>
       <button class="rt-btn" type="button" id="rtSocialBtn" aria-expanded="false" aria-label="Social links" data-testid="rt-social-toggle"><i class="fa-solid fa-at" aria-hidden="true"></i></button>
     </div>
     <div class="rt-option" style="transition-delay: 0.06s">
-      <span class="rt-label">Cygnus Agent <em class="rt-ph">add link</em></span>
-      <button class="rt-btn is-ph" type="button" aria-label="Cygnus Agent — placeholder, add destination" title="Cygnus Agent — add destination" data-testid="rt-agent"><i class="fa-solid fa-robot" aria-hidden="true"></i></button>
+      <span class="rt-label">Cygnus Agent</span>
+      <button class="rt-btn is-ph" type="button" aria-label="Cygnus Agent" title="Cygnus Agent" data-testid="rt-agent"><i class="fa-solid fa-robot" aria-hidden="true"></i></button>
     </div>
     <div class="rt-option">
       <span class="rt-label">Experience Cygnus</span>

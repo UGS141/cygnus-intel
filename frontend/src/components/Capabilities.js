@@ -10,32 +10,32 @@ const CAPABILITIES = [
     slug: 'ai-automation',
     title: 'AI Automation',
     line: 'Systems that take repetitive, rule-bound work off your team — reliably, measurably, around the clock.',
-    body: 'We look for work that follows a pattern: handoffs, data entry, monitoring, follow-ups. Then we build automation that does it the way a careful person would — faster, without fatigue, and with a clear trail of what it did and when.',
-    detail: 'Sample service lines: workflow automation, document processing, monitoring & alerting.',
+    body: 'We look for work that follows a pattern: handoffs, data entry, document processing, monitoring, follow-ups. Then we build automation that executes the way a careful person would — faster, without fatigue, and with a clear trail of what it did and when.',
+    detail: 'Core capabilities: workflow automation, document processing, intelligent routing, monitoring & alerting.',
   },
   {
     n: '02',
     slug: 'applied-intelligence',
     title: 'Applied Intelligence',
     line: 'Decision support and analysis — systems that read the situation, surface what matters, and explain their reasoning.',
-    body: 'Intelligence is only useful when it is legible. We build systems that can be questioned, audited and corrected, so the people accountable for outcomes stay in charge of them.',
-    detail: 'Sample service lines: decision briefs, analyst copilots, auditable recommendations.',
+    body: 'Intelligence is only useful when it is legible. We build systems that can be questioned, audited, and corrected, so the people accountable for business outcomes stay in control of them.',
+    detail: 'Core capabilities: decision briefs, analyst copilots, structured operational insights, auditable recommendations.',
   },
   {
     n: '03',
     slug: 'systems-integration',
-    title: 'Systems Integration',
-    line: 'AI that meets your stack where it lives — inside the tools, data and workflows you already run.',
-    body: 'The hard part of AI is rarely the model. It is the wiring: permissions, data quality, edge cases, the person on the night shift. We design for the whole system, not the demo.',
-    detail: 'Sample service lines: tool & data connection, workflow wiring, production hardening.',
+    title: 'Systems Integration & Web Development',
+    line: 'Custom AI solutions, web applications, and technical delivery wired into your existing production stack.',
+    body: 'The hard part of AI adoption is rarely model capability; it is the production engineering: data privacy, security permissions, edge-case routing, web applications, and connecting siloed systems without disruption.',
+    detail: 'Core capabilities: web application development, API & webhook pipelines, database wiring, production hardening.',
   },
   {
     n: '04',
     slug: 'long-horizon-research',
     title: 'Long-Horizon Research',
-    line: 'Directed research toward advanced general intelligence, with safety and human agency treated as design constraints.',
+    line: 'Directed research toward advanced planning and evaluations, with safety and human agency treated as design constraints.',
     body: 'Every capability we ship teaches us something about systems that plan and act over longer stretches of time. We hold ourselves to a plain standard: if we cannot explain what a system does, we do not deploy it.',
-    detail: 'Sample focus areas: long-horizon planning, evaluations, oversight mechanisms.',
+    detail: 'Research areas: multi-step planning, evaluation harnesses, oversight mechanisms, safety verification.',
   },
 ];
 
@@ -56,9 +56,7 @@ export const Capabilities = () => {
           </FadeUp>
           <FadeUp delay={0.12} className="lg:col-span-4 lg:col-start-9">
             <p className="f-mono text-[11px] uppercase leading-loose tracking-[0.18em] text-cream/50">
-              Focus areas shown with{' '}
-              <span className="text-gold">sample service lines</span> — replace with approved
-              offerings
+              Engineering AI automation, intelligent workflows, and technical delivery
             </p>
           </FadeUp>
         </div>
@@ -75,7 +73,7 @@ export const Capabilities = () => {
                     aria-expanded={isOpen}
                     aria-controls={`capability-panel-${i}`}
                     data-testid={`capability-accordion-item-${i + 1}`}
-                    className="group grid w-full grid-cols-[auto_1fr_auto] items-baseline gap-5 py-7 text-left md:gap-10"
+                    className="group grid w-full grid-cols-[auto_1fr_auto] items-baseline gap-5 py-7 text-left md:gap-10 cursor-pointer"
                   >
                     <span className="f-mono text-xs text-gold">{c.n}</span>
                     <span>
@@ -93,8 +91,9 @@ export const Capabilities = () => {
                     <span
                       className="justify-self-end text-cream/60 transition-transform duration-300 group-hover:text-gold"
                       style={{ transform: isOpen ? 'rotate(45deg)' : 'none' }}
+                      aria-hidden="true"
                     >
-                      <Plus size={18} aria-hidden="true" />
+                      <Plus size={18} />
                     </span>
                   </button>
                   <motion.div
@@ -110,7 +109,7 @@ export const Capabilities = () => {
                         className="f-mono mt-5 text-[11px] tracking-[0.16em] text-cream/60"
                         data-testid="capability-placeholder-tag"
                       >
-                        <span className="text-gold">SAMPLE</span> · {c.detail}
+                        <span className="text-gold">FOCUS</span> · {c.detail}
                       </p>
                       <Link
                         to={`/services/${c.slug}`}
@@ -131,3 +130,5 @@ export const Capabilities = () => {
     </section>
   );
 };
+
+export default Capabilities;

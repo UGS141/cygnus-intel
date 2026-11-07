@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, ArrowUpRight, Sparkles } from 'lucide-react';
-import { FadeUp, Kicker, Star4 } from './Reveal';
-import { SAMPLE_PROJECTS } from '../data/projects';
+import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
+import { FadeUp, Kicker } from './Reveal';
+import { PROJECTS } from '../data/projects';
 import { EMAIL } from '../lib/scroll';
 
 export const SignalAtlas = () => {
   const reduce = useReducedMotion();
   const [activeIdx, setActiveIdx] = useState(0);
-  const total = SAMPLE_PROJECTS.length;
-  const activeProject = SAMPLE_PROJECTS[activeIdx];
+  const total = PROJECTS.length;
+  const activeProject = PROJECTS[activeIdx];
 
   const handleNext = () => setActiveIdx((prev) => (prev + 1) % total);
   const handlePrev = () => setActiveIdx((prev) => (prev - 1 + total) % total);
@@ -20,7 +20,7 @@ export const SignalAtlas = () => {
       data-testid="signal-atlas-section"
       className="relative bg-navy text-cream py-24 md:py-32 border-t border-linedark"
       role="region"
-      aria-label="Signal Atlas — Project Showcase"
+      aria-label="Signal Atlas — Selected Projects"
     >
       <div className="mx-auto max-w-[1240px] px-6 md:px-10">
         <Kicker num="04" tone="dark">
@@ -30,13 +30,13 @@ export const SignalAtlas = () => {
         <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
           <FadeUp className="lg:col-span-7">
             <h2 className="f-display text-[clamp(1.9rem,3.4vw,3.1rem)] font-bold leading-[1.12]">
-              Systems shipped, measured, and{' '}
-              <span className="text-gold">directed.</span>
+              Selected projects and{' '}
+              <span className="text-gold">digital work.</span>
             </h2>
           </FadeUp>
           <FadeUp delay={0.12} className="lg:col-span-5">
-            <p className="f-mono text-[11px] uppercase tracking-[0.16em] text-coral leading-relaxed">
-              Sample showcase shown — replace with verified client outcomes and case studies before publishing
+            <p className="f-mono text-[11px] uppercase tracking-[0.16em] text-cream/70 leading-relaxed">
+              Selected digital work organized across specialized industry sectors.
             </p>
           </FadeUp>
         </div>
@@ -44,9 +44,9 @@ export const SignalAtlas = () => {
         {/* Signal Node Selector Bar */}
         <div className="mt-12 flex flex-wrap items-center gap-3 border-b border-linedark pb-6">
           <span className="f-mono text-[10px] uppercase tracking-[0.22em] text-cream/40 mr-2">
-            Select Signal:
+            Select Project:
           </span>
-          {SAMPLE_PROJECTS.map((proj, idx) => {
+          {PROJECTS.map((proj, idx) => {
             const isSelected = activeIdx === idx;
             return (
               <button
@@ -56,7 +56,7 @@ export const SignalAtlas = () => {
                 aria-pressed={isSelected}
                 aria-label={`Project ${proj.id}: ${proj.title}`}
                 onClick={() => setActiveIdx(idx)}
-                className={`f-mono flex items-center gap-2.5 px-4 py-2 text-xs uppercase tracking-[0.16em] border transition-all duration-200 rounded-[2px] ${
+                className={`f-mono flex items-center gap-2.5 px-4 py-2 text-xs uppercase tracking-[0.16em] border transition-all duration-200 rounded-[2px] cursor-pointer ${
                   isSelected
                     ? 'border-gold bg-gold/10 text-gold shadow-[0_0_15px_rgba(250,151,32,0.2)]'
                     : 'border-linedark bg-navysurface text-cream/60 hover:border-cream/40 hover:text-cream'
@@ -78,16 +78,13 @@ export const SignalAtlas = () => {
               </span>
               <span className="h-1 w-1 rounded-full bg-cream/30" aria-hidden="true" />
               <span className="f-mono text-[11px] uppercase tracking-[0.16em] text-cream/60">
-                {activeProject.category}
+                {activeProject.industry}
               </span>
             </div>
 
-            {activeProject.sample && (
-              <span className="f-mono inline-flex items-center gap-1.5 border border-coral/40 bg-coral/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-coral">
-                <Sparkles size={11} aria-hidden="true" />
-                Sample — Replace Before Publishing
-              </span>
-            )}
+            <span className="f-mono inline-flex items-center gap-1.5 border border-gold/40 bg-gold/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-gold">
+              Selected Digital Work
+            </span>
           </div>
 
           <AnimatePresence mode="wait">
@@ -107,59 +104,70 @@ export const SignalAtlas = () => {
                 <div className="space-y-6">
                   <div>
                     <h4 className="f-mono text-[10px] uppercase tracking-[0.22em] text-cream/40">
-                      Client Engagement
+                      Industry Sector
                     </h4>
                     <p className="f-mono mt-2 text-xs uppercase tracking-[0.14em] text-cream/80">
-                      {activeProject.client}
+                      {activeProject.industry}
                     </p>
                   </div>
 
                   <div>
                     <h4 className="f-mono text-[10px] uppercase tracking-[0.22em] text-cream/40">
-                      The Operational Challenge
+                      Project Description
                     </h4>
                     <p className="mt-2 text-sm leading-relaxed text-cream/80">
-                      {activeProject.challenge}
+                      {activeProject.description}
                     </p>
                   </div>
 
-                  <div>
-                    <h4 className="f-mono text-[10px] uppercase tracking-[0.22em] text-cream/40">
-                      Cygnus Contribution
-                    </h4>
-                    <p className="mt-2 text-sm leading-relaxed text-cream/80">
-                      {activeProject.contribution}
-                    </p>
+                  <div className="pt-2">
+                    <a
+                      href={activeProject.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-testid={`project-external-link-${activeProject.id.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                      className="f-mono inline-flex items-center gap-2 rounded-[2px] bg-gold px-6 py-3 text-xs uppercase tracking-[0.18em] text-navy transition-colors duration-200 hover:bg-cream"
+                    >
+                      Visit Website
+                      <ArrowUpRight size={14} aria-hidden="true" />
+                    </a>
                   </div>
                 </div>
 
                 <div className="space-y-6 md:border-l md:border-linedark md:pl-8">
                   <div>
                     <h4 className="f-mono text-[10px] uppercase tracking-[0.22em] text-cream/40">
-                      Measured Outcome
+                      Domain Focus
                     </h4>
                     <div className="mt-2 rounded-[2px] border border-linedark bg-navy/60 p-4">
                       <p className="text-sm font-medium leading-relaxed text-cream">
-                        {activeProject.outcome}
+                        {activeProject.focus}
                       </p>
                     </div>
                   </div>
 
                   <div>
                     <h4 className="f-mono text-[10px] uppercase tracking-[0.22em] text-cream/40">
-                      Technology Architecture
+                      Core Areas
                     </h4>
-                    <p className="f-mono mt-2 text-xs leading-relaxed tracking-wide text-cream/70">
-                      {activeProject.tools}
-                    </p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {activeProject.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="f-mono rounded-[2px] border border-linedark bg-navy/40 px-2.5 py-1 text-[10px] uppercase tracking-[0.14em] text-cream/70"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
                   <div className="pt-2">
                     <a
-                      href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Discussion on ${activeProject.title} (${activeProject.id})`)}`}
+                      href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Inquiry regarding ${activeProject.title} (${activeProject.industry})`)}`}
                       className="f-mono inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-gold hover:text-cream transition-colors duration-200 border-b border-gold/40 hover:border-cream pb-1"
                     >
-                      Discuss this architecture
+                      Discuss this implementation
                       <ArrowUpRight size={13} aria-hidden="true" />
                     </a>
                   </div>
@@ -180,7 +188,7 @@ export const SignalAtlas = () => {
                 onClick={handlePrev}
                 data-testid="signal-atlas-prev"
                 aria-label="Previous project"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-linedark text-cream/70 hover:border-gold hover:text-gold transition-colors duration-200"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-linedark text-cream/70 hover:border-gold hover:text-gold transition-colors duration-200 cursor-pointer"
               >
                 <ArrowLeft size={16} aria-hidden="true" />
               </button>
@@ -189,7 +197,7 @@ export const SignalAtlas = () => {
                 onClick={handleNext}
                 data-testid="signal-atlas-next"
                 aria-label="Next project"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-linedark text-cream/70 hover:border-gold hover:text-gold transition-colors duration-200"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-linedark text-cream/70 hover:border-gold hover:text-gold transition-colors duration-200 cursor-pointer"
               >
                 <ArrowRight size={16} aria-hidden="true" />
               </button>
@@ -197,26 +205,45 @@ export const SignalAtlas = () => {
           </div>
         </div>
 
-        {/* Overview Grid of All Projects */}
-        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
-          {SAMPLE_PROJECTS.map((proj, idx) => (
+        {/* Overview Grid of All Projects Organized by Industry */}
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {PROJECTS.map((proj, idx) => (
             <div
               key={proj.id}
               onClick={() => setActiveIdx(idx)}
-              className={`cursor-pointer border p-6 transition-all duration-200 ${
+              data-testid={`project-card-${proj.id.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+              className={`flex flex-col justify-between border p-6 transition-all duration-200 cursor-pointer ${
                 activeIdx === idx
                   ? 'border-gold bg-white/[0.04]'
                   : 'border-linedark bg-white/[0.015] hover:border-cream/30'
               }`}
             >
-              <div className="flex items-center justify-between text-xs">
-                <span className="f-mono font-bold text-gold">{proj.id}</span>
-                <span className="f-mono text-[10px] uppercase text-cream/40">{proj.category}</span>
+              <div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="f-mono font-bold text-gold">{proj.id}</span>
+                  <span className="f-mono text-[10px] uppercase text-cream/40">{proj.industry}</span>
+                </div>
+                <h4 className="f-display mt-3 text-lg font-bold text-cream">{proj.title}</h4>
+                <p className="mt-2 text-xs leading-relaxed text-cream/65">
+                  {proj.description}
+                </p>
               </div>
-              <h4 className="f-display mt-3 text-lg font-bold text-cream">{proj.title}</h4>
-              <p className="mt-2 text-xs leading-relaxed text-cream/65 line-clamp-2">
-                {proj.challenge}
-              </p>
+
+              <div className="mt-5 pt-4 border-t border-linedark/60 flex items-center justify-between">
+                <span className="f-mono text-[10px] uppercase tracking-[0.14em] text-cream/40">
+                  {proj.industry}
+                </span>
+                <a
+                  href={proj.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  aria-label={`Visit ${proj.title} website`}
+                  className="f-mono inline-flex items-center gap-1 text-[11px] uppercase tracking-[0.14em] text-gold hover:text-cream transition-colors duration-200"
+                >
+                  Visit <ArrowUpRight size={12} aria-hidden="true" />
+                </a>
+              </div>
             </div>
           ))}
         </div>

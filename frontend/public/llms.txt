@@ -9,7 +9,7 @@
 - **Contact Email**: business@cygnuslabs.si
 - **Core Focus**: AI automation for businesses, AI agents and intelligent workflows, business process automation, custom AI integrations, web development, and technical delivery.
 - **Research Vision**: Long-horizon intelligence and Cygnus superintelligence as an ambitious guiding horizon for autonomous planning and safety engineering (not claiming current AGI).
-- **Engagement Model**: 6 to 12 week scoped pilots, human-in-the-loop review, and auditable production outcomes.
+- **Engagement Model**: Scoped deployments, human-in-the-loop review, and auditable production outcomes.
 - **Client Data & Security**: Zero-data-retention model configurations, enterprise encryption, and no training on customer proprietary data.
 
 ## Core Disciplines & Services
@@ -32,15 +32,26 @@
    - Purpose: Applied research into multi-step planning, automated evaluation, and safety oversight mechanisms.
    - Superintelligence Concept: An ambitious, long-term research vision emphasizing that advanced systems must expand human capability through sober, verifiable engineering.
 
-## Work and Case Studies
+## Selected Projects & Digital Work
 
-- The website showcases three illustrative sample architectures in the Signal Atlas (`https://www.cygnuslabs.si/#work`): Workflow Intelligence, Decision Brief, and Connected Operations.
-- All sample projects are labeled with visible `SAMPLE` markers. Cygnus does not publish unverified client logos or invented metrics.
+The website features selected digital work and technical implementations organized by industry in the Signal Atlas (`https://www.cygnuslabs.si/#work`):
+
+1. **Dental technology** — Adore Milling Solutions (`https://adore-smile.vercel.app/`)
+   - Digital dental milling solutions, precision, quality, consistency, and open-system CAD/CAM integrations.
+
+2. **Life sciences** — Integris Life Sciences (`https://integris-ls-ugs-2026.vercel.app/`)
+   - Pharmaceutical formulations and healthcare products.
+
+3. **IT and workforce solutions** — BES Info Tech Pvt Limited (`https://besinfotech.vercel.app/`)
+   - IT recruitment, manpower solutions, and campus placements.
+
+4. **Automotive commerce** — True Car Bazaar (`https://true-car-bazaar2026.vercel.app/`)
+   - A pre-owned car marketplace for buying, selling, or exchanging used cars.
 
 ## Career Opportunities
 
-- Cygnus AI Labs hires engineers and researchers across AI systems, full-stack web development, and technical operations (`https://www.cygnuslabs.si/careers`).
-- Applications are accepted directly via email at `business@cygnuslabs.si`.
+- Cygnus AI Labs welcomes inquiries from engineers and researchers across AI systems, full-stack web development, and technical operations (`https://www.cygnuslabs.si/careers`).
+- Applications and inquiries are accepted directly via email at `business@cygnuslabs.si`.
 
 ## Canonical Pages & Links
 

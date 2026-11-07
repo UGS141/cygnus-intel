@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
-import { FadeUp, Kicker, Ph, Star4 } from '../components/Reveal';
+import { FadeUp, Kicker, Star4 } from '../components/Reveal';
 import { scrollToId, EMAIL } from '../lib/scroll';
 import { OPEN_ROLES, CAREER_AREAS, CULTURE } from '../data/careers';
 
@@ -37,14 +37,14 @@ const RolesCarousel = () => {
                   {r.title}
                 </h3>
                 <p className="mt-4 max-w-2xl text-sm leading-relaxed text-navy/75">
-                  <span className="f-mono text-cobalt">Sample:</span> {r.description.replace(/^Sample: /, '')}
+                  {r.description}
                 </p>
                 <div className="f-mono mt-6 flex flex-wrap gap-x-8 gap-y-2 text-[10px] uppercase tracking-[0.16em] text-navy/55">
                   <span>Location: {r.location}</span>
                   <span>Type: {r.type}</span>
                 </div>
                 <a
-                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Application — open role ${r.id}`)}`}
+                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Application — open role ${r.id} (${r.title})`)}`}
                   data-testid={`role-apply-${i + 1}`}
                   className="f-mono mt-7 inline-flex items-center gap-2 border-b border-cobalt/50 pb-1 text-[11px] uppercase tracking-[0.18em] text-cobalt transition-colors duration-200 hover:border-cobalt"
                 >
@@ -67,7 +67,7 @@ const RolesCarousel = () => {
             data-testid="role-carousel-prev"
             aria-label="Previous role"
             onClick={() => setIdx((idx + n - 1) % n)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-navy/30 text-navy transition-colors duration-200 hover:border-cobalt hover:text-cobalt"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-navy/30 text-navy transition-colors duration-200 hover:border-cobalt hover:text-cobalt cursor-pointer"
           >
             <ArrowLeft size={16} aria-hidden="true" />
           </button>
@@ -76,7 +76,7 @@ const RolesCarousel = () => {
             data-testid="role-carousel-next"
             aria-label="Next role"
             onClick={() => setIdx((idx + 1) % n)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-navy/30 text-navy transition-colors duration-200 hover:border-cobalt hover:text-cobalt"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-navy/30 text-navy transition-colors duration-200 hover:border-cobalt hover:text-cobalt cursor-pointer"
           >
             <ArrowRight size={16} aria-hidden="true" />
           </button>
@@ -116,7 +116,7 @@ const CareerAreas = () => {
             aria-controls="career-area-panel"
             data-testid={`career-area-tab-${i + 1}`}
             onClick={() => setActive(i)}
-            className={`f-mono border px-5 py-3 text-[11px] uppercase tracking-[0.16em] transition-colors duration-200 ${
+            className={`f-mono border px-5 py-3 text-[11px] uppercase tracking-[0.16em] transition-colors duration-200 cursor-pointer ${
               active === i
                 ? 'border-gold text-gold'
                 : 'border-linedark text-cream/60 hover:border-cream/40 hover:text-cream'
@@ -142,13 +142,13 @@ const CareerAreas = () => {
             transition={{ duration: 0.3, ease: 'easeOut' }}
           >
             <h3 className="f-display text-xl font-bold tracking-tight md:text-2xl">
-              <Ph>{CAREER_AREAS[active].label}</Ph>
+              {CAREER_AREAS[active].label}
             </h3>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-cream/80">
-              <Ph>{CAREER_AREAS[active].description}</Ph>
+              {CAREER_AREAS[active].description}
             </p>
             <p className="f-mono mt-6 text-[11px] uppercase tracking-[0.16em] text-cream/55">
-              Typical roles: <Ph>{CAREER_AREAS[active].roles}</Ph>
+              Typical roles: {CAREER_AREAS[active].roles}
             </p>
           </motion.div>
         </AnimatePresence>
@@ -223,8 +223,8 @@ export default function CareersPage() {
               </h2>
             </FadeUp>
             <FadeUp delay={0.1} className="lg:col-span-4 lg:col-start-9">
-              <p className="f-mono text-[11px] uppercase leading-loose tracking-[0.16em] text-coral">
-                Sample listings shown — replace with real openings when hiring
+              <p className="f-mono text-[11px] uppercase leading-loose tracking-[0.16em] text-navy/55">
+                Opportunities across engineering and research
               </p>
             </FadeUp>
           </div>
@@ -260,7 +260,7 @@ export default function CareersPage() {
             <FadeUp delay={0.1} className="lg:col-span-4 lg:col-start-9">
               <p className="text-[15px] leading-relaxed text-navy/75">
                 Culture is what happens when nobody is performing it. We would rather show you than
-                tell you — approved details to come.
+                tell you — built on clarity, craft, and mutual respect.
               </p>
             </FadeUp>
           </div>
@@ -270,7 +270,7 @@ export default function CareersPage() {
                 <div className="h-full border border-linelight bg-paper p-8" data-testid={`culture-card-${i + 1}`}>
                   <h3 className="f-display text-lg font-bold tracking-tight">{c.label}</h3>
                   <p className="mt-4 text-sm leading-relaxed text-navy/75">
-                    <span className="f-mono text-cobalt">Sample:</span> {c.detail.replace(/^Sample: /, '')}
+                    {c.detail}
                   </p>
                 </div>
               </FadeUp>
@@ -289,8 +289,7 @@ export default function CareersPage() {
           </FadeUp>
           <FadeUp delay={0.1}>
             <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-cream/75">
-              The listings above are placeholders — the inbox is not. If the work on this site
-              sounds like yours, write to us and say what you would build.
+              If the work on this site sounds like yours, write to us and say what you would build.
             </p>
           </FadeUp>
           <FadeUp delay={0.18}>
@@ -303,8 +302,7 @@ export default function CareersPage() {
               <ArrowUpRight size={18} aria-hidden="true" />
             </a>
             <p className="f-mono mt-8 text-[11px] uppercase leading-loose tracking-[0.16em] text-cream/50">
-              Application process: intro call → technical conversation → paid trial week{' '}
-              <Ph>(sample)</Ph>
+              Direct inquiries and introductions: {EMAIL}
             </p>
           </FadeUp>
         </div>

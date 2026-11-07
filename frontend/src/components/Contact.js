@@ -1,5 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
-import { FadeUp, Kicker, Ph } from './Reveal';
+import { FadeUp, Kicker } from './Reveal';
 import { EMAIL } from '../lib/scroll';
 
 export const Contact = () => {
@@ -47,9 +47,8 @@ export const Contact = () => {
               </a>
             </FadeUp>
             <FadeUp delay={0.18}>
-              <p className="f-mono mt-10 space-y-1 text-[11px] uppercase leading-loose tracking-[0.16em] text-cream/45">
-                <span className="block">Phone: <Ph>+386 (0)0 000 000 (sample)</Ph></span>
-                <span className="block">Booking link: <Ph>cal.com/cygnus-labs (sample)</Ph></span>
+              <p className="f-mono mt-10 text-[11px] uppercase leading-loose tracking-[0.16em] text-cream/45">
+                Direct inquiries and technical consultations via email
               </p>
             </FadeUp>
           </div>
@@ -98,36 +97,35 @@ export const Contact = () => {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      placeholder="you@example.com"
+                      required
+                      placeholder="ada@domain.com"
                       data-testid="contact-input-email"
                       className="mt-2 w-full border-b border-linedark bg-transparent py-3 text-sm text-cream placeholder:text-cream/30 focus:border-gold focus:outline-none"
                     />
                   </div>
                   <div className="sm:col-span-2">
-                    <label htmlFor="c-message" className="f-mono block text-[10px] uppercase tracking-[0.2em] text-cream/50">
-                      What should work differently?
+                    <label htmlFor="c-msg" className="f-mono block text-[10px] uppercase tracking-[0.2em] text-cream/50">
+                      What are you building or trying to solve?
                     </label>
                     <textarea
-                      id="c-message"
+                      id="c-msg"
                       name="message"
-                      rows="4"
-                      placeholder="Describe the work you would like to automate, or the question you are carrying."
+                      rows={4}
+                      required
+                      placeholder="Tell us about the workflow, technical constraints, or system you want to automate..."
                       data-testid="contact-input-message"
-                      className="mt-2 w-full resize-none border-b border-linedark bg-transparent py-3 text-sm text-cream placeholder:text-cream/30 focus:border-gold focus:outline-none"
+                      className="mt-2 w-full border-b border-linedark bg-transparent py-3 text-sm text-cream placeholder:text-cream/30 focus:border-gold focus:outline-none"
                     />
                   </div>
                 </div>
                 <button
                   type="submit"
-                  data-testid="contact-form-submit-button"
-                  className="f-mono mt-9 inline-flex w-full items-center justify-center gap-3 rounded-[2px] bg-gold px-7 py-4 text-xs uppercase tracking-[0.18em] text-navy transition-colors duration-300 hover:bg-cream sm:w-auto"
+                  data-testid="contact-submit-button"
+                  className="f-mono mt-10 inline-flex items-center gap-3 rounded-[2px] bg-gold px-8 py-4 text-xs uppercase tracking-[0.18em] text-navy transition-colors duration-300 hover:bg-cream cursor-pointer"
                 >
-                  Open email draft
+                  Draft inquiry email
                   <ArrowUpRight size={14} aria-hidden="true" />
                 </button>
-                <p className="f-mono mt-5 text-[10px] uppercase leading-loose tracking-[0.16em] text-cream/40">
-                  Opens a draft in your email app, addressed to {EMAIL}. Nothing is stored on this page.
-                </p>
               </form>
             </FadeUp>
           </div>
@@ -136,3 +134,5 @@ export const Contact = () => {
     </section>
   );
 };
+
+export default Contact;

@@ -868,7 +868,7 @@ body.menu-open .burger span:nth-child(3) { transform: translateY(-6.5px) rotate(
 .ov-tile strong { display: block; font-size: calc(var(--u) * 26); font-weight: 600; }
 .ov-tile span { color: #8c8c8c; font-size: calc(var(--u) * 12); }
 
-/* Dash phone */
+/* Dash mobile */
 @media (max-width: 720px) {
   .dash { --u: min(calc(100vw / 1440), calc(100dvh / 1008)); min-height: 100svh; }
   .dash-main { padding: 12px 14px 20px; }
@@ -1284,7 +1284,7 @@ body.menu-open .burger span:nth-child(3) { transform: translateY(-6.5px) rotate(
 .proj-list { margin-top: 40px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
 .proj { border-top: 1px solid rgba(255, 255, 255, 0.1); }
 .proj-row { border-top: none; }
-.chip-sample {
+.chip-project {
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;

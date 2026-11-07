@@ -1,41 +1,38 @@
-import { FadeUp, Kicker, Ph } from './Reveal';
+import { FadeUp, Kicker } from './Reveal';
 
 export const PointOfView = () => (
-  <section id="point-of-view" data-testid="company-pov-section" className="bg-paper text-navy">
+  <section id="point-of-view" data-testid="point-of-view-section" className="bg-paper text-navy">
     <div className="mx-auto max-w-[1240px] px-6 py-24 md:px-10 lg:py-32">
       <Kicker num="01" tone="light">
         Point of view
       </Kicker>
 
-      <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-12">
+      <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
         <div className="lg:col-span-7">
           <FadeUp>
-            <h2
-              data-testid="company-pov-headline-text"
-              className="f-display text-[clamp(1.9rem,3.4vw,3.1rem)] font-bold leading-[1.12]"
-            >
+            <h2 className="f-display text-[clamp(2.2rem,4.6vw,3.8rem)] font-extrabold leading-[1.08] tracking-[-0.01em]">
               Most automation saves labour. The interesting kind changes what a team can{' '}
-              <span className="text-cobalt">attempt</span>.
+              <span className="text-cobalt">attempt.</span>
             </h2>
           </FadeUp>
         </div>
-        <div className="space-y-6 text-[15px] leading-relaxed text-navy/80 lg:col-span-4 lg:col-start-9">
-          <FadeUp delay={0.1}>
+
+        <div className="space-y-6 text-[15px] leading-relaxed text-navy/80 lg:col-span-5 lg:pt-2">
+          <FadeUp delay={0.08}>
             <p>
-              Cygnus AI Labs exists because machine intelligence is finally good enough to do real
-              work — and because most organizations are still using it like a toy. We build systems
-              that take work off people&rsquo;s plates: the repetitive, the slow, the impossible to
-              scale.
+              We treat artificial intelligence not as an ornament on an existing process, but as a
+              rethinking of the work itself. When routine cognition becomes abundant, the role of
+              human judgement does not diminish — it becomes the limiting factor.
             </p>
           </FadeUp>
-          <FadeUp delay={0.18}>
+          <FadeUp delay={0.16}>
             <p>
-              We are not interested in demos that impress and then evaporate. An intelligent system
-              should earn its place the way a good colleague does — by understanding the job, doing
-              it reliably, and knowing when to ask a human.
+              Our work spans AI automation for businesses, applied decision intelligence, custom AI
+              solutions, and full-stack web development. Every system we build is designed for production
+              reality: auditable, legible, and directly integrated into everyday business operations.
             </p>
           </FadeUp>
-          <FadeUp delay={0.26}>
+          <FadeUp delay={0.24}>
             <p>
               And we are honest about where this leads. Automation compounds. Every system we ship
               is a step toward intelligence that can plan, reason and act over long horizons — what
@@ -58,8 +55,7 @@ export const PointOfView = () => (
           <p className="f-mono text-[11px] uppercase leading-loose tracking-[0.18em] text-navy/60">
             The mark, unchanged — a swan in orbit, a star ahead.
             <br />
-            Founded 2024 by a small team of engineers and researchers.{' '}
-            <span className="text-cobalt">(Sample — replace with the real story)</span>
+            Engineering purposeful AI automation, intelligent workflows, and robust technical infrastructure.
           </p>
         </div>
       </FadeUp>

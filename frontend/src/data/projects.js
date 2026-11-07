@@ -1,53 +1,47 @@
 // ─────────────────────────────────────────────────────────────────
-// SIGNAL ATLAS — PROJECT DATA (single source of truth)
-//
-// Current content is SAMPLE content for design preview — every entry
-// keeps `sample: true` (the visible SAMPLE badge) and outcomes carry
-// an inline "Sample:" prefix. Replace fields with verified details,
-// then set `sample: false` only when the entry is real and approved.
+// SELECTED PROJECTS — DIGITAL WORK (single source of truth)
 // ─────────────────────────────────────────────────────────────────
 
-export const SAMPLE_PROJECTS = [
+export const PROJECTS = [
   {
     id: 'P.01',
-    sample: true,
-    title: 'Workflow Intelligence',
-    category: 'AI automation',
-    client: 'Internal pilot program (sample)',
-    challenge:
-      'Repeated manual handoffs can make everyday workflows harder to manage.',
-    contribution:
-      'Map a workflow, identify useful automation opportunities, and design AI-assisted routing with human review for exceptions.',
-    outcome:
-      'Sample: weekly reporting handoffs dropped from ~6 hours to ~40 minutes in the pilot workflow.',
-    tools: 'Python, LangGraph, Postgres, internal APIs (sample stack)',
+    industry: 'Dental technology',
+    title: 'Adore Milling Solutions',
+    url: 'https://adore-smile.vercel.app/',
+    description:
+      'Digital dental milling solutions, precision, quality, consistency, and open-system CAD/CAM integrations.',
+    focus: 'Digital dental milling, CAD/CAM integration, and manufacturing consistency.',
+    tags: ['CAD/CAM', 'Dental Milling', 'Precision Systems'],
   },
   {
     id: 'P.02',
-    sample: true,
-    title: 'Decision Brief',
-    category: 'Decision intelligence',
-    client: 'Internal pilot program (sample)',
-    challenge:
-      'Relevant information may be spread across multiple sources, making it difficult to form a clear view.',
-    contribution:
-      'Design a human-reviewed intelligence interface that brings relevant information together to support decisions.',
-    outcome:
-      'Sample: analysts assembled a complete decision brief in about an hour instead of a full day.',
-    tools: 'React, FastAPI, pgvector, Claude API (sample stack)',
+    industry: 'Life sciences',
+    title: 'Integris Life Sciences',
+    url: 'https://integris-ls-ugs-2026.vercel.app/',
+    description:
+      'Pharmaceutical formulations and healthcare products.',
+    focus: 'Pharmaceutical formulations, healthcare products, and scientific precision.',
+    tags: ['Formulations', 'Healthcare Products', 'Life Sciences'],
   },
   {
     id: 'P.03',
-    sample: true,
-    title: 'Connected Operations',
-    category: 'Integration',
-    client: 'Internal pilot program (sample)',
-    challenge:
-      'Separate tools can make it difficult to move information through a process consistently.',
-    contribution:
-      'Explore an integration approach that connects existing tools and adds automation where appropriate.',
-    outcome:
-      'Sample: order data moved between three systems with zero manual re-entry during the pilot.',
-    tools: 'Node.js, webhooks, message queues, ERP APIs (sample stack)',
+    industry: 'IT and workforce solutions',
+    title: 'BES Info Tech Pvt Limited',
+    url: 'https://besinfotech.vercel.app/',
+    description:
+      'IT recruitment, manpower solutions, and campus placements.',
+    focus: 'IT talent recruitment, enterprise manpower solutions, and campus placement drives.',
+    tags: ['IT Recruitment', 'Manpower Solutions', 'Campus Placements'],
+  },
+  {
+    id: 'P.04',
+    industry: 'Automotive commerce',
+    title: 'True Car Bazaar',
+    url: 'https://true-car-bazaar2026.vercel.app/',
+    description:
+      'A pre-owned car marketplace for buying, selling, or exchanging used cars.',
+    focus: 'Digital pre-owned vehicle marketplace, inventory discovery, and vehicle exchange.',
+    tags: ['Automotive Commerce', 'Vehicle Marketplace', 'Inventory Systems'],
   },
 ];
+

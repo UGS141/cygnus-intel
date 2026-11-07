@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import { FadeUp, Kicker, Ph } from './Reveal';
+import { FadeUp, Kicker } from './Reveal';
 
 export const CareersBand = () => (
   <section id="careers" data-testid="careers-band" className="border-y border-linedark bg-navysurface/80 text-cream">
@@ -26,7 +26,7 @@ export const CareersBand = () => (
             <ArrowUpRight size={14} aria-hidden="true" />
           </Link>
           <p className="f-mono mt-5 text-[11px] uppercase leading-loose tracking-[0.16em] text-cream/50">
-            Hiring status: actively hiring <Ph>(sample — replace)</Ph>
+            Engineering, integration &amp; research opportunities
           </p>
         </FadeUp>
       </div>

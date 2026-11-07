@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowUp, AtSign, Bot, Sparkles, Linkedin, Instagram, Twitter } from 'lucide-react';
 import { usePointerFine } from './Motion';
 
-// PLACEHOLDER URLS — replace each href with the real Cygnus profile when available.
+// Official Cygnus social channels (configured when available)
 const SOCIALS = [
   { label: 'LinkedIn', href: null, icon: Linkedin },
   { label: 'Instagram', href: null, icon: Instagram },

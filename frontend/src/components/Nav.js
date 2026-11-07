@@ -7,7 +7,7 @@ import { SERVICES } from '../data/services';
 
 const CAREERS_MENU = [
   { title: 'Careers at Cygnus', tag: 'Why work here', to: '/careers' },
-  { title: 'Open roles', tag: 'Sample listings — replace when hiring', to: '/careers#open-roles' },
+  { title: 'Open roles', tag: 'Engineering & delivery roles', to: '/careers#open-roles' },
   { title: 'Career areas', tag: 'Engineering · Research · Operations', to: '/careers#career-areas' },
   { title: 'People & culture', tag: 'How we work, plainly', to: '/careers#culture' },
   { title: 'Apply directly', tag: 'business@cygnuslabs.si', to: '/careers#apply' },

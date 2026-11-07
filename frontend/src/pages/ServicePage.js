@@ -1,6 +1,6 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
-import { FadeUp, Kicker, Ph, Star4 } from '../components/Reveal';
+import { FadeUp, Kicker, Star4 } from '../components/Reveal';
 import { ServiceVisual } from '../components/ServiceVisual';
 import { useSectionNav, EMAIL } from '../lib/scroll';
 import { SERVICES } from '../data/services';
@@ -114,7 +114,7 @@ export default function ServicePage() {
             {s.what}
           </p>
           <p className="f-mono mt-8 text-[11px] uppercase leading-loose tracking-[0.16em] text-navy/55">
-            Detail: <Ph>{s.detail}</Ph>
+            Engagement model: <span className="text-navy/80">{s.detail}</span>
           </p>
         </FadeUp>
       </Narrative>
@@ -149,12 +149,10 @@ export default function ServicePage() {
           <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
             <FadeUp className="lg:col-span-7">
               <p className="text-lg leading-relaxed text-navy/85">
-                The Signal Atlas carries sample projects in this area — clearly labeled as samples
-                until verified work replaces them.
+                Explore selected digital work and technical implementations across our focus areas in the Signal Atlas.
               </p>
               <p className="f-mono mt-5 text-[11px] uppercase leading-loose tracking-[0.16em] text-navy/55">
-                Sample: related work is shown in the Signal Atlas —{' '}
-                <Ph>add real engagements here when available</Ph>
+                Selected projects and technical architecture across industries
               </p>
             </FadeUp>
             <FadeUp delay={0.1} className="lg:col-span-4 lg:col-start-9">

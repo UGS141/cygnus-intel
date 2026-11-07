@@ -1,4 +1,4 @@
-import { FadeUp, Kicker, Ph } from './Reveal';
+import { FadeUp, Kicker } from './Reveal';
 
 const PRINCIPLES = [
   {
@@ -54,12 +54,10 @@ export const Trust = () => (
 
       <FadeUp>
         <p
-          data-testid="trust-placeholder-note"
+          data-testid="trust-governance-note"
           className="f-mono mt-12 text-[11px] leading-relaxed tracking-[0.14em] text-navy/55"
         >
-          <span className="f-mono text-gold">Sample:</span> model cards for every deployed system;
-          quarterly capability and alignment reviews.{' '}
-          <span className="text-cobalt">(replace with approved details)</span>
+          Operational transparency for every deployed system: structured audit logs, verifiable execution traces, and human-in-the-loop oversight.
         </p>
       </FadeUp>
     </div>
