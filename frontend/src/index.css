@@ -344,6 +344,31 @@ html {
   100% { transform: scale(1.15); opacity: 1; }
 }
 
+/* Subtle Ambient Star Glint Twinkle */
+.star-glint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #FA9720;
+  vertical-align: middle;
+  animation: starTwinkle var(--twinkle-dur, 4.6s) ease-in-out infinite;
+  animation-delay: var(--twinkle-delay, 0s);
+  will-change: opacity, transform, filter;
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(0.92);
+    filter: drop-shadow(0 0 1px rgba(250, 151, 32, 0.2));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.18);
+    filter: drop-shadow(0 0 6px rgba(250, 151, 32, 0.65));
+  }
+}
+
 /* Reduced Motion Overrides */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -362,7 +387,8 @@ html {
   .dash-dot,
   .track-pulse,
   .arc-flow,
-  .star-glow {
+  .star-glow,
+  .star-glint {
     animation: none !important;
   }
 }

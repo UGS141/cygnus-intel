@@ -3,6 +3,7 @@ import { motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTran
 import { ArrowDown, ArrowUpRight, Pause, Play } from 'lucide-react';
 import { scrollToId } from '../lib/scroll';
 import { OrbitalField } from './OrbitalField';
+import { StarGlint } from './Reveal';
 
 const EASE = [0.16, 1, 0.3, 1];
 
@@ -77,7 +78,10 @@ export const Hero = () => {
             <H1Line i={0}>Intelligence</H1Line>
             <H1Line i={1}>with a long</H1Line>
             <H1Line i={2}>
-              <span className="text-gold">horizon.</span>
+              <span className="text-gold inline-flex items-baseline gap-2.5">
+                horizon.
+                <StarGlint size={15} delay={0.4} />
+              </span>
             </H1Line>
           </h1>
           <motion.p
@@ -162,3 +166,5 @@ export const Hero = () => {
     </section>
   );
 };
+
+export default Hero;

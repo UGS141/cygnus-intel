@@ -30,6 +30,16 @@ export const Star4 = ({ size = 10, className = '' }) => (
   </svg>
 );
 
+export const StarGlint = ({ size = 10, delay = 0, className = '', style = {} }) => (
+  <span
+    className={`star-glint ${className}`}
+    style={{ '--twinkle-delay': `${delay}s`, ...style }}
+    aria-hidden="true"
+  >
+    <Star4 size={size} />
+  </span>
+);
+
 export const Kicker = ({ num, children, tone = 'dark' }) => (
   <FadeUp>
     <div
@@ -37,7 +47,7 @@ export const Kicker = ({ num, children, tone = 'dark' }) => (
         tone === 'dark' ? 'text-cream/60' : 'text-navy/60'
       }`}
     >
-      <Star4 size={9} className="text-gold" />
+      <StarGlint size={9} delay={(parseInt(num, 10) || 1) * 0.6} className="text-gold" />
       <span className="text-gold">{num}</span>
       <span className={`h-px w-8 ${tone === 'dark' ? 'bg-cream/30' : 'bg-navy/30'}`} />
       <span>{children}</span>

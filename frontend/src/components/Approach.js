@@ -94,13 +94,14 @@ export const Approach = () => (
 
       <FadeUp>
         <p
-          data-testid="proposed-approach-disclaimer-footnote"
+          data-testid="approach-methodology-note"
           className="f-mono mt-16 border-t border-linelight pt-5 text-[11px] leading-relaxed tracking-[0.14em] text-navy/55"
         >
-          <span className="text-cobalt">[PROPOSED APPROACH — CONFIRM]</span> · Shown as a proposal
-          for discussion — not yet a documented company process.
+          Engineered for production reliability: structured discovery, architectural review, staged delivery, and continuous measurement.
         </p>
       </FadeUp>
     </div>
   </section>
 );
+
+export default Approach;

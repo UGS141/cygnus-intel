@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
-import { FadeUp, Kicker } from './Reveal';
+import { FadeUp, Kicker, StarGlint } from './Reveal';
 import { PROJECTS } from '../data/projects';
 import { EMAIL } from '../lib/scroll';
 
@@ -31,7 +31,10 @@ export const SignalAtlas = () => {
           <FadeUp className="lg:col-span-7">
             <h2 className="f-display text-[clamp(1.9rem,3.4vw,3.1rem)] font-bold leading-[1.12]">
               Selected projects and{' '}
-              <span className="text-gold">digital work.</span>
+              <span className="text-gold inline-flex items-baseline gap-2">
+                digital work.
+                <StarGlint size={13} delay={0.8} />
+              </span>
             </h2>
           </FadeUp>
           <FadeUp delay={0.12} className="lg:col-span-5">
@@ -83,6 +86,7 @@ export const SignalAtlas = () => {
             </div>
 
             <span className="f-mono inline-flex items-center gap-1.5 border border-gold/40 bg-gold/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-gold">
+              <StarGlint size={8} delay={0.4} />
               Selected Digital Work
             </span>
           </div>

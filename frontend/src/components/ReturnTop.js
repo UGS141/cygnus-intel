@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowUp, AtSign, Bot, Sparkles, Linkedin, Instagram, Twitter } from 'lucide-react';
 import { usePointerFine } from './Motion';
 
-// Official Cygnus social channels (configured when available)
+// Official Cygnus social channels
 const SOCIALS = [
   { label: 'LinkedIn', href: null, icon: Linkedin },
-  { label: 'Instagram', href: null, icon: Instagram },
+  { label: 'Instagram', href: 'https://www.instagram.com/cygnuslabs.si', icon: Instagram },
   { label: 'X / Twitter', href: null, icon: Twitter },
 ];
 
@@ -87,6 +87,8 @@ export const ReturnTop = () => {
               <a
                 key={s.label}
                 href={s.href || '#'}
+                target={s.href ? '_blank' : undefined}
+                rel={s.href ? 'noopener noreferrer' : undefined}
                 onClick={s.href ? undefined : (e) => e.preventDefault()}
                 tabIndex={open && socialOpen ? 0 : -1}
                 aria-label={s.href ? `Cygnus AI Labs on ${s.label}` : `${s.label} — placeholder, add profile URL`}
@@ -156,3 +158,5 @@ export const ReturnTop = () => {
     </div>
   );
 };
+
+export default ReturnTop;

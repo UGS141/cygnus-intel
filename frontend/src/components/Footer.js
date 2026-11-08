@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FadeUp } from './Reveal';
+import { FadeUp, StarGlint } from './Reveal';
 import { useSectionNav, EMAIL } from '../lib/scroll';
 import { SERVICES } from '../data/services';
 
@@ -19,7 +19,8 @@ export const Footer = () => {
     <footer id="site-footer" data-testid="site-footer-container" className="border-t border-linedark bg-[#000410] text-cream">
       <div className="mx-auto max-w-[1240px] px-6 pb-14 pt-20 md:px-10 md:pt-24">
         <FadeUp>
-          <p className="f-mono text-[10px] uppercase tracking-[0.24em] text-cream/45">
+          <p className="f-mono text-[10px] uppercase tracking-[0.24em] text-cream/45 flex items-center gap-2">
+            <StarGlint size={8} delay={1.2} />
             The long view
           </p>
         </FadeUp>
@@ -29,7 +30,10 @@ export const Footer = () => {
             className="f-display mt-6 max-w-5xl text-[clamp(1.7rem,6.8vw,6.2rem)] font-extrabold uppercase leading-[1.03] tracking-[-0.02em]"
           >
             Superintelligence should expand{' '}
-            <span className="text-gold">human possibility.</span>
+            <span className="text-gold inline-flex items-baseline gap-2">
+              human possibility.
+              <StarGlint size={16} delay={0.3} />
+            </span>
           </p>
         </FadeUp>
       </div>
@@ -58,6 +62,18 @@ export const Footer = () => {
             >
               {EMAIL}
             </a>
+            <div className="mt-4">
+              <a
+                href="https://www.instagram.com/cygnuslabs.si"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Cygnus AI Labs on Instagram"
+                className="f-mono inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.16em] text-cream/60 transition-colors duration-200 hover:text-gold"
+              >
+                <span>Instagram</span>
+                <span className="text-gold">↗</span>
+              </a>
+            </div>
           </div>
 
           <nav aria-label="Footer index" className="md:col-span-3">
@@ -116,3 +132,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;
